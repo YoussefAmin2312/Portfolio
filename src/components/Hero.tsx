@@ -2,25 +2,23 @@ import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBackground from '@/assets/hero-bg.jpg';
 import profileAvatar from '@/assets/profile-avatar.jpg';
-
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated gradient background */}
       <div className="absolute inset-0 hero-gradient"></div>
       
       {/* Background image overlay */}
-      <div 
-        className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      ></div>
+      <div className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroBackground})`
+    }}></div>
       
       {/* Glass overlay */}
       <div className="absolute inset-0 glass"></div>
@@ -29,9 +27,7 @@ const Hero = () => {
         <div className="max-w-4xl ml-auto mr-8 text-left">
 
           {/* Subtitle */}
-          <p className="font-heading text-xl sm:text-2xl lg:text-3xl text-white/90 mb-4 fade-in-delay-2">
-            UI/UX Designer & Mobile App Developer
-          </p>
+          <p className="font-heading text-xl sm:text-2xl lg:text-3xl text-white/90 mb-4 fade-in-delay-2">A Computer Engineer, UI/UX Designer & Mobile App Developer</p>
 
           {/* Tagline */}
           <p className="text-lg sm:text-xl text-white/80 mb-12 max-w-2xl fade-in-delay-2">
@@ -40,27 +36,16 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16 fade-in-delay-3">
-            <Button
-              onClick={() => scrollToSection('#projects')}
-              size="lg"
-              className="bg-white/10 border-2 border-white text-white backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-300 font-semibold px-8 py-3 text-lg shadow-lg"
-            >
+            <Button onClick={() => scrollToSection('#projects')} size="lg" className="bg-white/10 border-2 border-white text-white backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-300 font-semibold px-8 py-3 text-lg shadow-lg">
               View My Work
             </Button>
-            <Button
-              onClick={() => scrollToSection('#contact')}
-              variant="outline"
-              size="lg"
-              className="bg-white/10 border-2 border-white text-white backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-300 font-semibold px-8 py-3 text-lg shadow-lg"
-            >
+            <Button onClick={() => scrollToSection('#contact')} variant="outline" size="lg" className="bg-white/10 border-2 border-white text-white backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-300 font-semibold px-8 py-3 text-lg shadow-lg">
               Contact Me
             </Button>
           </div>
 
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
