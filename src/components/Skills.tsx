@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Palette, Code2 } from 'lucide-react';
+import { Palette, Code2, Figma, Pencil, Image, Users, FileText, TestTube, Split, LayoutGrid, Map, UserCircle, CheckCircle, Github, Smartphone, Flame, Database, Code, Terminal } from 'lucide-react';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,26 +23,26 @@ const Skills = () => {
   }, []);
 
   const designSkills = [
-    'Figma',
-    'Adobe XD', 
-    'Canva',
-    'User Interviews',
-    'Surveys & Questionnaires',
-    'Usability Testing',
-    'A/B Testing',
-    'Card Sorting',
-    'Affinity Mapping',
-    'Personas & Journey Mapping',
-    'Heuristic Evaluation'
+    { name: 'Figma', icon: Figma },
+    { name: 'Adobe XD', icon: Pencil },
+    { name: 'Canva', icon: Image },
+    { name: 'User Interviews', icon: Users },
+    { name: 'Surveys & Questionnaires', icon: FileText },
+    { name: 'Usability Testing', icon: TestTube },
+    { name: 'A/B Testing', icon: Split },
+    { name: 'Card Sorting', icon: LayoutGrid },
+    { name: 'Affinity Mapping', icon: Map },
+    { name: 'Personas & Journey Mapping', icon: UserCircle },
+    { name: 'Heuristic Evaluation', icon: CheckCircle }
   ];
 
   const techSkills = [
-    'Github',
-    'Flutter',
-    'Firebase',
-    'SQLite',
-    'Python',
-    'Matlab'
+    { name: 'Github', icon: Github },
+    { name: 'Flutter', icon: Smartphone },
+    { name: 'Firebase', icon: Flame },
+    { name: 'SQLite', icon: Database },
+    { name: 'Python', icon: Code },
+    { name: 'Matlab', icon: Terminal }
   ];
 
   return (
@@ -66,22 +66,20 @@ const Skills = () => {
               Design & User Research Stack
             </h3>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 max-w-5xl mx-auto">
-            {designSkills.map((skill, index) => (
-              <div 
-                key={skill}
-                className={`bg-background/50 backdrop-blur-sm border border-border rounded-xl p-4 text-center hover-scale transition-all duration-300 ${
-                  isVisible ? 'animate-fade-in' : 'opacity-0'
-                }`}
-                style={{ 
-                  animationDelay: `${index * 100}ms`
-                }}
-              >
-                <span className="text-sm font-medium text-foreground block">
-                  {skill}
-                </span>
-              </div>
-            ))}
+          <div className="relative overflow-hidden">
+            <div className={`flex gap-6 ${isVisible ? 'animate-scroll' : ''}`}>
+              {[...designSkills, ...designSkills].map((skill, index) => (
+                <div 
+                  key={`${skill.name}-${index}`}
+                  className="flex-shrink-0 bg-background/50 backdrop-blur-sm border border-border rounded-xl px-6 py-4 flex items-center gap-3 hover-scale transition-all duration-300"
+                >
+                  <skill.icon className="text-primary" size={24} />
+                  <span className="text-sm font-medium text-foreground whitespace-nowrap">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -93,22 +91,20 @@ const Skills = () => {
               Tech Stack
             </h3>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-3xl mx-auto">
-            {techSkills.map((skill, index) => (
-              <div 
-                key={skill}
-                className={`bg-background/50 backdrop-blur-sm border border-border rounded-xl p-4 text-center hover-scale transition-all duration-300 ${
-                  isVisible ? 'animate-fade-in' : 'opacity-0'
-                }`}
-                style={{ 
-                  animationDelay: `${(designSkills.length + index) * 100}ms`
-                }}
-              >
-                <span className="text-sm font-medium text-foreground block">
-                  {skill}
-                </span>
-              </div>
-            ))}
+          <div className="relative overflow-hidden">
+            <div className={`flex gap-6 ${isVisible ? 'animate-scroll-reverse' : ''}`}>
+              {[...techSkills, ...techSkills, ...techSkills].map((skill, index) => (
+                <div 
+                  key={`${skill.name}-${index}`}
+                  className="flex-shrink-0 bg-background/50 backdrop-blur-sm border border-border rounded-xl px-6 py-4 flex items-center gap-3 hover-scale transition-all duration-300"
+                >
+                  <skill.icon className="text-primary" size={24} />
+                  <span className="text-sm font-medium text-foreground whitespace-nowrap">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
