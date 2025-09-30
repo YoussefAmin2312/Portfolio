@@ -1,5 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
-import { Palette, Code2, Figma, Pencil, Image, Users, FileText, TestTube, Split, LayoutGrid, Map, UserCircle, CheckCircle, Github, Smartphone, Flame, Database, Code, Terminal } from 'lucide-react';
+import { Palette, Code2, Pencil, Users, FileText, TestTube, Split, LayoutGrid, Map, UserCircle, CheckCircle, Terminal } from 'lucide-react';
+
+// Import actual logos
+import figmaLogo from '@/assets/logos/figma.svg';
+import canvaLogo from '@/assets/logos/canva.svg';
+import githubLogo from '@/assets/logos/github.svg';
+import flutterLogo from '@/assets/logos/flutter.svg';
+import firebaseLogo from '@/assets/logos/firebase.svg';
+import sqliteLogo from '@/assets/logos/sqlite.svg';
+import pythonLogo from '@/assets/logos/python.svg';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,9 +32,9 @@ const Skills = () => {
   }, []);
 
   const designSkills = [
-    { name: 'Figma', icon: Figma },
+    { name: 'Figma', logo: figmaLogo },
     { name: 'Adobe XD', icon: Pencil },
-    { name: 'Canva', icon: Image },
+    { name: 'Canva', logo: canvaLogo },
     { name: 'User Interviews', icon: Users },
     { name: 'Surveys & Questionnaires', icon: FileText },
     { name: 'Usability Testing', icon: TestTube },
@@ -37,11 +46,11 @@ const Skills = () => {
   ];
 
   const techSkills = [
-    { name: 'Github', icon: Github },
-    { name: 'Flutter', icon: Smartphone },
-    { name: 'Firebase', icon: Flame },
-    { name: 'SQLite', icon: Database },
-    { name: 'Python', icon: Code },
+    { name: 'Github', logo: githubLogo },
+    { name: 'Flutter', logo: flutterLogo },
+    { name: 'Firebase', logo: firebaseLogo },
+    { name: 'SQLite', logo: sqliteLogo },
+    { name: 'Python', logo: pythonLogo },
     { name: 'Matlab', icon: Terminal }
   ];
 
@@ -73,7 +82,11 @@ const Skills = () => {
                   key={`${skill.name}-${index}`}
                   className="flex-shrink-0 bg-background/50 backdrop-blur-sm border border-border rounded-xl px-6 py-4 flex items-center gap-3 hover-scale transition-all duration-300"
                 >
-                  <skill.icon className="text-primary" size={24} />
+                  {'logo' in skill ? (
+                    <img src={skill.logo} alt={skill.name} className="w-6 h-6" />
+                  ) : (
+                    <skill.icon className="text-primary" size={24} />
+                  )}
                   <span className="text-sm font-medium text-foreground whitespace-nowrap">
                     {skill.name}
                   </span>
@@ -98,7 +111,11 @@ const Skills = () => {
                   key={`${skill.name}-${index}`}
                   className="flex-shrink-0 bg-background/50 backdrop-blur-sm border border-border rounded-xl px-6 py-4 flex items-center gap-3 hover-scale transition-all duration-300"
                 >
-                  <skill.icon className="text-primary" size={24} />
+                  {'logo' in skill ? (
+                    <img src={skill.logo} alt={skill.name} className="w-6 h-6" />
+                  ) : (
+                    <skill.icon className="text-primary" size={24} />
+                  )}
                   <span className="text-sm font-medium text-foreground whitespace-nowrap">
                     {skill.name}
                   </span>
