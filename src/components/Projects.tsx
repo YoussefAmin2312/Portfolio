@@ -43,6 +43,18 @@ const Projects = () => {
               className="flex items-center gap-8 lg:gap-12 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
+              {/* Conditionally render button first for odd indexes (zigzag pattern) */}
+              {index % 2 === 1 && (
+                <div className="hidden lg:flex flex-1 justify-center">
+                  <button
+                    onClick={() => handleProjectClick(project.id)}
+                    className="bg-white/10 backdrop-blur-xl border border-white/20 text-foreground px-10 py-5 rounded-2xl font-semibold text-lg hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 shadow-elegant hover:shadow-2xl"
+                  >
+                    View Case Study
+                  </button>
+                </div>
+              )}
+
               {/* Project Image */}
               <div 
                 onClick={() => handleProjectClick(project.id)}
@@ -67,15 +79,17 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* View Case Study Button */}
-              <div className="hidden lg:flex flex-1 justify-center">
-                <button
-                  onClick={() => handleProjectClick(project.id)}
-                  className="bg-white/10 backdrop-blur-xl border border-white/20 text-foreground px-10 py-5 rounded-2xl font-semibold text-lg hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 shadow-elegant hover:shadow-2xl"
-                >
-                  View Case Study
-                </button>
-              </div>
+              {/* Render button after image for even indexes */}
+              {index % 2 === 0 && (
+                <div className="hidden lg:flex flex-1 justify-center">
+                  <button
+                    onClick={() => handleProjectClick(project.id)}
+                    className="bg-white/10 backdrop-blur-xl border border-white/20 text-foreground px-10 py-5 rounded-2xl font-semibold text-lg hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 shadow-elegant hover:shadow-2xl"
+                  >
+                    View Case Study
+                  </button>
+                </div>
+              )}
             </div>
           ))}
         </div>
