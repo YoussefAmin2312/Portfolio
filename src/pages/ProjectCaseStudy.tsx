@@ -1,13 +1,24 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Calendar, Users, Code, Target } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Calendar, Users, Code, Target, Lightbulb, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 import bookHeavenImg from '@/assets/book-heaven-project.jpg';
 import mendAiImg from '@/assets/mend-ai-project.jpg';
+import theraImg from '@/assets/thera-project.png';
 import yogaSkincareImg from '@/assets/yoga-skincare-project.jpg';
 import cyberPhysicalImg from '@/assets/cyber-physical-project.jpg';
 import temperatureSensorImg from '@/assets/temperature-sensor-project.jpg';
 import portfolioWebsiteImg from '@/assets/portfolio-website-project.jpg';
+import theraResearchImg from '@/assets/thera-research-diagram.jpg';
+import theraPersonaImg from '@/assets/thera-persona-photo.jpg';
+import theraUserFlowImg from '@/assets/thera-user-flow.jpg';
+import theraWireframeLowImg from '@/assets/thera-wireframe-low.jpg';
+import theraWireframeMidImg from '@/assets/thera-wireframe-mid.jpg';
+import theraWireframeHighImg from '@/assets/thera-wireframe-high.jpg';
+import theraFinalUIImg from '@/assets/thera-final-ui.jpg';
+import theraUIComponentsImg from '@/assets/thera-ui-components.jpg';
+import theraUsabilityImg from '@/assets/thera-usability-testing.jpg';
 
 const ProjectCaseStudy = () => {
   const { projectId } = useParams();
@@ -40,30 +51,73 @@ const ProjectCaseStudy = () => {
         'Gained valuable experience in team leadership and project management'
       ]
     },
-    'mend-ai': {
-      title: 'Mend - AI Couples Therapy',
-      subtitle: 'Voice-Based AI Relationship Counseling MVP',
-      image: mendAiImg,
-      category: 'AI/Healthcare',
+    'thera': {
+      title: 'Thera',
+      subtitle: 'Mental Health & Therapy App',
+      image: theraImg,
+      category: 'UI/UX Design',
       duration: '4 months',
-      team: '2 developers',
-      role: 'Lead Developer & AI Integration Specialist',
-      technologies: ['Flutter', 'AI/ML APIs', 'Voice Processing', 'Natural Language Processing'],
-      overview: 'Developed an innovative MVP for AI-powered couples therapy using voice interaction technology. The app provides personalized relationship counseling through natural conversation.',
-      challenges: [
-        'Integrating complex AI models for relationship counseling',
-        'Ensuring privacy and security for sensitive conversations',
-        'Creating a natural voice interaction experience'
+      team: '1 designer',
+      role: 'UI/UX Designer',
+      technologies: ['Figma', 'User Research', 'Prototyping', 'Usability Testing'],
+      overview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+      problem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Many individuals struggle to access affordable and convenient mental health support.',
+      research: {
+        methods: ['User interviews with 12 participants', 'Competitive analysis of 5 therapy apps', 'Survey with 50+ respondents'],
+        findings: [
+          'Users feel overwhelmed by complex onboarding processes',
+          'Privacy and security are top concerns for therapy apps',
+          'Users prefer flexible scheduling and communication methods'
+        ],
+        image: theraResearchImg
+      },
+      persona: {
+        name: 'Sarah Chen',
+        age: 32,
+        occupation: 'Marketing Manager',
+        bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Busy professional seeking convenient mental health support that fits her schedule.',
+        photo: theraPersonaImg,
+        goals: [
+          'Find a therapist who understands her work-life balance challenges',
+          'Access therapy sessions without disrupting her busy schedule',
+          'Track progress and maintain consistency in treatment'
+        ],
+        frustrations: [
+          'Traditional therapy requires too much time commitment',
+          'Difficulty finding therapists with immediate availability',
+          'Concerns about privacy when booking appointments'
+        ]
+      },
+      projectGoals: [
+        'Create an intuitive onboarding experience that reduces anxiety',
+        'Design a flexible scheduling system that accommodates various lifestyles',
+        'Implement clear privacy features that build user trust'
       ],
-      solutions: [
-        'Collaborated with AI specialists to fine-tune therapy models',
-        'Implemented end-to-end encryption for all conversations',
-        'Developed custom voice processing algorithms for better understanding'
-      ],
-      results: [
-        'Created a functional MVP with positive user feedback',
-        'Demonstrated innovative approach to digital healthcare',
-        'Gained expertise in AI integration and healthcare technology'
+      userFlow: {
+        image: theraUserFlowImg
+      },
+      wireframes: {
+        low: theraWireframeLowImg,
+        mid: theraWireframeMidImg,
+        high: theraWireframeHighImg
+      },
+      finalUI: {
+        screens: theraFinalUIImg,
+        components: theraUIComponentsImg
+      },
+      usabilityTesting: {
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Conducted moderated usability tests with 8 participants to validate design decisions.',
+        changes: [
+          'Simplified onboarding from 5 steps to 3 based on user feedback',
+          'Added quick booking feature for users who prefer immediate sessions',
+          'Redesigned privacy settings to be more prominent and accessible'
+        ],
+        image: theraUsabilityImg
+      },
+      keyTakeaways: [
+        'Early user testing revealed critical pain points that shaped the final design',
+        'Clear communication of privacy features significantly increased user trust',
+        'Iterative design process led to a 40% improvement in task completion rates'
       ]
     },
     'yoga-skincare': {
@@ -173,6 +227,7 @@ const ProjectCaseStudy = () => {
   };
 
   const project = projects[projectId as keyof typeof projects];
+  const isTheraProject = projectId === 'thera';
 
   if (!project) {
     return (
@@ -188,6 +243,333 @@ const ProjectCaseStudy = () => {
     );
   }
 
+  // Render UX Case Study for Thera
+  if (isTheraProject && 'persona' in project) {
+    return (
+      <div className="min-h-screen bg-background">
+        {/* Header */}
+        <div className="bg-muted/30 py-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <Button 
+              variant="ghost" 
+              onClick={() => navigate('/')}
+              className="mb-6"
+            >
+              <ArrowLeft size={16} className="mr-2" />
+              Back to Portfolio
+            </Button>
+            
+            <div className="flex items-center gap-4 mb-4">
+              <Badge variant="secondary">{project.category}</Badge>
+              <span className="text-sm text-muted-foreground">{project.duration}</span>
+            </div>
+            
+            <h1 className="font-heading font-bold text-4xl lg:text-5xl text-foreground mb-4">
+              {project.title}
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
+              {project.subtitle}
+            </p>
+          </div>
+        </div>
+
+        {/* Project Image */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="rounded-lg overflow-hidden shadow-lg mb-12">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-96 object-cover"
+            />
+          </div>
+
+          <div className="max-w-5xl mx-auto space-y-16">
+            {/* Project Overview */}
+            <section>
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                Project Overview
+              </h2>
+              <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+                {project.overview}
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <Card>
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-foreground mb-2">Role</h3>
+                    <p className="text-muted-foreground">{project.role}</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="pt-6">
+                    <h3 className="font-semibold text-foreground mb-2">Tools</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, index) => (
+                        <Badge key={index} variant="outline">{tech}</Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+
+            {/* The Problem */}
+            <section>
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                The Problem
+              </h2>
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                {project.problem}
+              </p>
+            </section>
+
+            {/* Research */}
+            <section>
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                Research
+              </h2>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-semibold text-xl text-foreground mb-3">Methods</h3>
+                  <ul className="space-y-2">
+                    {project.research.methods.map((method, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <Lightbulb className="text-primary mt-1 flex-shrink-0" size={18} />
+                        <span className="text-muted-foreground">{method}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-xl text-foreground mb-3">Key Findings</h3>
+                  <ul className="space-y-2">
+                    {project.research.findings.map((finding, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <Target className="text-primary mt-1 flex-shrink-0" size={18} />
+                        <span className="text-muted-foreground">{finding}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="rounded-lg overflow-hidden shadow-md mt-6">
+                  <img
+                    src={project.research.image}
+                    alt="Research diagram"
+                    className="w-full"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* Persona */}
+            <section>
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                User Persona
+              </h2>
+              
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="flex-shrink-0">
+                      <img
+                        src={project.persona.photo}
+                        alt={project.persona.name}
+                        className="w-32 h-32 rounded-full object-cover"
+                      />
+                    </div>
+                    <div className="flex-1 space-y-4">
+                      <div>
+                        <h3 className="font-semibold text-xl text-foreground">
+                          {project.persona.name}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          {project.persona.age} years old, {project.persona.occupation}
+                        </p>
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {project.persona.bio}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6 mt-6 pt-6 border-t">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-3">Goals</h4>
+                      <ul className="space-y-2">
+                        {project.persona.goals.map((goal, index) => (
+                          <li key={index} className="flex items-start space-x-2">
+                            <span className="text-primary mt-1">✓</span>
+                            <span className="text-muted-foreground text-sm">{goal}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-3">Frustrations</h4>
+                      <ul className="space-y-2">
+                        {project.persona.frustrations.map((frustration, index) => (
+                          <li key={index} className="flex items-start space-x-2">
+                            <AlertCircle className="text-destructive mt-0.5 flex-shrink-0" size={16} />
+                            <span className="text-muted-foreground text-sm">{frustration}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </section>
+
+            {/* Project Goals */}
+            <section>
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                Project Goals
+              </h2>
+              <ul className="space-y-3">
+                {project.projectGoals.map((goal, index) => (
+                  <li key={index} className="flex items-start space-x-3">
+                    <Target className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span className="text-muted-foreground text-lg">{goal}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            {/* User Flow */}
+            <section>
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                User Flow / Task Flow
+              </h2>
+              <div className="rounded-lg overflow-hidden shadow-md">
+                <img
+                  src={project.userFlow.image}
+                  alt="User flow diagram"
+                  className="w-full"
+                />
+              </div>
+            </section>
+
+            {/* Wireframes */}
+            <section>
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                Wireframes
+              </h2>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="font-semibold text-xl text-foreground mb-4">Low Fidelity</h3>
+                  <div className="rounded-lg overflow-hidden shadow-md">
+                    <img
+                      src={project.wireframes.low}
+                      alt="Low fidelity wireframes"
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-xl text-foreground mb-4">Mid Fidelity</h3>
+                  <div className="rounded-lg overflow-hidden shadow-md">
+                    <img
+                      src={project.wireframes.mid}
+                      alt="Mid fidelity wireframes"
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-xl text-foreground mb-4">High Fidelity</h3>
+                  <div className="rounded-lg overflow-hidden shadow-md">
+                    <img
+                      src={project.wireframes.high}
+                      alt="High fidelity wireframes"
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Final UI Design */}
+            <section>
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                Final UI Design
+              </h2>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="font-semibold text-xl text-foreground mb-4">High-fidelity Screens</h3>
+                  <div className="rounded-lg overflow-hidden shadow-md">
+                    <img
+                      src={project.finalUI.screens}
+                      alt="Final UI screens"
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-xl text-foreground mb-4">UI Components</h3>
+                  <div className="rounded-lg overflow-hidden shadow-md">
+                    <img
+                      src={project.finalUI.components}
+                      alt="UI components"
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Usability Testing */}
+            <section>
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                Usability Testing & Iterations
+              </h2>
+              <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+                {project.usabilityTesting.description}
+              </p>
+              
+              <div className="mb-6">
+                <h3 className="font-semibold text-xl text-foreground mb-3">Changes Made</h3>
+                <ul className="space-y-2">
+                  {project.usabilityTesting.changes.map((change, index) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <Code className="text-primary mt-1 flex-shrink-0" size={18} />
+                      <span className="text-muted-foreground">{change}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-lg overflow-hidden shadow-md">
+                <img
+                  src={project.usabilityTesting.image}
+                  alt="Usability testing results"
+                  className="w-full"
+                />
+              </div>
+            </section>
+
+            {/* Key Takeaways */}
+            <section className="pb-12">
+              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                Key Takeaways
+              </h2>
+              <ul className="space-y-3">
+                {project.keyTakeaways.map((takeaway, index) => (
+                  <li key={index} className="flex items-start space-x-3">
+                    <Lightbulb className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span className="text-muted-foreground text-lg">{takeaway}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Render traditional project case study
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -240,49 +622,55 @@ const ProjectCaseStudy = () => {
             </section>
 
             {/* Challenges */}
-            <section>
-              <h2 className="font-heading font-bold text-2xl text-foreground mb-4">
-                Challenges
-              </h2>
-              <ul className="space-y-3">
-                {project.challenges.map((challenge, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <Target className="text-primary mt-0.5" size={16} />
-                    <span className="text-muted-foreground">{challenge}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            {'challenges' in project && (
+              <section>
+                <h2 className="font-heading font-bold text-2xl text-foreground mb-4">
+                  Challenges
+                </h2>
+                <ul className="space-y-3">
+                  {project.challenges.map((challenge, index) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <Target className="text-primary mt-0.5" size={16} />
+                      <span className="text-muted-foreground">{challenge}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             {/* Solutions */}
-            <section>
-              <h2 className="font-heading font-bold text-2xl text-foreground mb-4">
-                Solutions
-              </h2>
-              <ul className="space-y-3">
-                {project.solutions.map((solution, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <Code className="text-primary mt-0.5" size={16} />
-                    <span className="text-muted-foreground">{solution}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            {'solutions' in project && (
+              <section>
+                <h2 className="font-heading font-bold text-2xl text-foreground mb-4">
+                  Solutions
+                </h2>
+                <ul className="space-y-3">
+                  {project.solutions.map((solution, index) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <Code className="text-primary mt-0.5" size={16} />
+                      <span className="text-muted-foreground">{solution}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             {/* Results */}
-            <section>
-              <h2 className="font-heading font-bold text-2xl text-foreground mb-4">
-                Results & Impact
-              </h2>
-              <ul className="space-y-3">
-                {project.results.map((result, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <ExternalLink className="text-primary mt-0.5" size={16} />
-                    <span className="text-muted-foreground">{result}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            {'results' in project && (
+              <section>
+                <h2 className="font-heading font-bold text-2xl text-foreground mb-4">
+                  Results & Impact
+                </h2>
+                <ul className="space-y-3">
+                  {project.results.map((result, index) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <ExternalLink className="text-primary mt-0.5" size={16} />
+                      <span className="text-muted-foreground">{result}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
           </div>
 
           {/* Sidebar */}
