@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import bookHeavenImg from '@/assets/book-heaven-project.jpg';
 import mendAiImg from '@/assets/mend-ai-project.jpg';
 import theraImg from '@/assets/thera-project.png';
+import theraDemoVideo from '@/assets/thera-demo-video.mp4';
 import yogaSkincareImg from '@/assets/yoga-skincare-project.jpg';
 import cyberPhysicalImg from '@/assets/cyber-physical-project.jpg';
 import temperatureSensorImg from '@/assets/temperature-sensor-project.jpg';
@@ -274,12 +275,15 @@ const ProjectCaseStudy = () => {
           </div>
         </div>
 
-        {/* Project Image */}
+        {/* Project Video */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="rounded-lg overflow-hidden shadow-lg mb-12">
-            <img
-              src={project.image}
-              alt={project.title}
+            <video
+              src={theraDemoVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-full h-96 object-cover"
             />
           </div>
