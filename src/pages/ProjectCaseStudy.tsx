@@ -16,11 +16,16 @@ import theraResearchImg from '@/assets/thera-research-diagram.jpg';
 import theraPersonaImg from '@/assets/thera-persona-photo.jpg';
 import doubleDiamondImg from '@/assets/double-diamond-diagram.png';
 import theraTaskFlowImg from '@/assets/thera-task-flow.png';
-import theraWireframeLowImg from '@/assets/thera-wireframe-low.jpg';
-import theraWireframeMidImg from '@/assets/thera-wireframe-mid.jpg';
-import theraWireframeHighImg from '@/assets/thera-wireframe-high.jpg';
-import theraFinalUIImg from '@/assets/thera-final-ui.jpg';
-import theraUIComponentsImg from '@/assets/thera-ui-components.jpg';
+import theraWireframeLow1 from '@/assets/thera-wireframe-low-1.png';
+import theraWireframeLow2 from '@/assets/thera-wireframe-low-2.png';
+import theraWireframeLow3 from '@/assets/thera-wireframe-low-3.png';
+import theraWireframeLow4 from '@/assets/thera-wireframe-low-4.png';
+import theraWireframeLow5 from '@/assets/thera-wireframe-low-5.png';
+import theraWireframeLow6 from '@/assets/thera-wireframe-low-6.png';
+import theraWireframeLow7 from '@/assets/thera-wireframe-low-7.png';
+import theraWireframeLow8 from '@/assets/thera-wireframe-low-8.png';
+import theraWireframeLow9 from '@/assets/thera-wireframe-low-9.png';
+import theraWireframeLow10 from '@/assets/thera-wireframe-low-10.png';
 import theraUsabilityImg from '@/assets/thera-usability-testing.jpg';
 import theraHighScreen1 from '@/assets/thera-high-screen-1.png';
 import theraHighScreen2 from '@/assets/thera-high-screen-2.png';
@@ -115,13 +120,18 @@ const ProjectCaseStudy = () => {
         image: theraTaskFlowImg
       },
       wireframes: {
-        low: theraWireframeLowImg,
-        mid: theraWireframeMidImg,
-        high: theraWireframeHighImg
-      },
-      finalUI: {
-        screens: theraFinalUIImg,
-        components: theraUIComponentsImg
+        low: [
+          theraWireframeLow1,
+          theraWireframeLow2,
+          theraWireframeLow3,
+          theraWireframeLow4,
+          theraWireframeLow5,
+          theraWireframeLow6,
+          theraWireframeLow7,
+          theraWireframeLow8,
+          theraWireframeLow9,
+          theraWireframeLow10
+        ]
       },
       usabilityTesting: {
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Conducted moderated usability tests with 8 participants to validate design decisions.',
@@ -581,32 +591,16 @@ const ProjectCaseStudy = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="font-semibold text-xl text-foreground mb-4">Low Fidelity</h3>
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <img
-                      src={project.wireframes.low}
-                      alt="Low fidelity wireframes"
-                      className="w-full"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-xl text-foreground mb-4">Mid Fidelity</h3>
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <img
-                      src={project.wireframes.mid}
-                      alt="Mid fidelity wireframes"
-                      className="w-full"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-xl text-foreground mb-4">High Fidelity</h3>
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <img
-                      src={project.wireframes.high}
-                      alt="High fidelity wireframes"
-                      className="w-full"
-                    />
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {project.wireframes.low.map((wireframe, index) => (
+                      <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                        <img
+                          src={wireframe}
+                          alt={`Low fidelity wireframe ${index + 1}`}
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -617,41 +611,29 @@ const ProjectCaseStudy = () => {
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 Final UI Design
               </h2>
-              <div className="space-y-8">
-                <div>
-                  <h3 className="font-semibold text-xl text-foreground mb-4">High-fidelity Screens</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {[
-                      { src: theraHighScreen1, alt: 'Onboarding - Find Your Therapist' },
-                      { src: theraHighScreen2, alt: 'Onboarding - Book in Minutes' },
-                      { src: theraHighScreen3, alt: 'Onboarding - Heal at your Pace' },
-                      { src: theraHighScreen4, alt: 'Home - Upcoming Sessions' },
-                      { src: theraHighScreen5, alt: 'Therapist List' },
-                      { src: theraHighScreen6, alt: 'Filter Options' },
-                      { src: theraHighScreen7, alt: 'Therapist List with Footer' },
-                      { src: theraHighScreen8, alt: 'Therapist Details' },
-                      { src: theraHighScreen9, alt: 'Book Appointment - Availability' },
-                      { src: theraHighScreen10, alt: 'Booking Confirmation' }
-                    ].map((screen, index) => (
-                      <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                        <img
-                          src={screen.src}
-                          alt={screen.alt}
-                          className="w-full h-auto"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-xl text-foreground mb-4">UI Components</h3>
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <img
-                      src={project.finalUI.components}
-                      alt="UI components"
-                      className="w-full"
-                    />
-                  </div>
+              <div>
+                <h3 className="font-semibold text-xl text-foreground mb-4">High-fidelity Screens</h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {[
+                    { src: theraHighScreen1, alt: 'Onboarding - Find Your Therapist' },
+                    { src: theraHighScreen2, alt: 'Onboarding - Book in Minutes' },
+                    { src: theraHighScreen3, alt: 'Onboarding - Heal at your Pace' },
+                    { src: theraHighScreen4, alt: 'Home - Upcoming Sessions' },
+                    { src: theraHighScreen5, alt: 'Therapist List' },
+                    { src: theraHighScreen6, alt: 'Filter Options' },
+                    { src: theraHighScreen7, alt: 'Therapist List with Footer' },
+                    { src: theraHighScreen8, alt: 'Therapist Details' },
+                    { src: theraHighScreen9, alt: 'Book Appointment - Availability' },
+                    { src: theraHighScreen10, alt: 'Booking Confirmation' }
+                  ].map((screen, index) => (
+                    <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                      <img
+                        src={screen.src}
+                        alt={screen.alt}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </section>
