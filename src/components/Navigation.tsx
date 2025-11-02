@@ -21,8 +21,8 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
+      <div className="max-w-[1400px] mx-auto px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <button 
