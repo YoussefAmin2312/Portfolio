@@ -9,7 +9,7 @@ import mendAiImg from '@/assets/mend-ai-project.jpg';
 import theraImg from '@/assets/thera-project.png';
 import theraDemoVideo from '@/assets/thera-demo-video.mp4';
 import teachlyImg from '@/assets/teachly-project.jpg';
-import teachlyHeaderImg from '@/assets/teachly-header.jpg';
+import teachlyHeaderImg from '@/assets/teachly-header.svg';
 import yogaSkincareImg from '@/assets/yoga-skincare-project.jpg';
 import cyberPhysicalImg from '@/assets/cyber-physical-project.jpg';
 import temperatureSensorImg from '@/assets/temperature-sensor-project.jpg';
