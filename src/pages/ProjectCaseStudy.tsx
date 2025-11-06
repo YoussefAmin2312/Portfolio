@@ -490,7 +490,7 @@ const ProjectCaseStudy = () => {
   };
 
   const project = projects[projectId as keyof typeof projects];
-  const isDetailedCaseStudy = projectId === 'thera' || projectId === 'teachly';
+  const isDetailedCaseStudy = projectId === 'thera' || projectId === 'teachly' || projectId === 'book-heaven';
 
   if (!project) {
     return (
@@ -506,8 +506,8 @@ const ProjectCaseStudy = () => {
     );
   }
 
-  // Render detailed UX Case Study for Thera and Teachly
-  if (isDetailedCaseStudy && ('persona' in project || 'personas' in project)) {
+  // Render detailed UX Case Study for Thera, Teachly, and VernX
+  if (isDetailedCaseStudy && ('persona' in project || 'personas' in project || 'researchMethodology' in project)) {
     const isTeachlyProject = projectId === 'teachly';
     const headerImage = isTeachlyProject ? teachlyHeaderImg : project.image;
     
@@ -637,20 +637,20 @@ const ProjectCaseStudy = () => {
                       ))}
                     </div>
                   </>
-                ) : isTeachlyProject && 'framework' in project.research && project.research.framework === 'design-thinking' ? (
+                ) : isTeachlyProject && 'research' in project && 'framework' in (project as any).research && (project as any).research.framework === 'design-thinking' ? (
                   // Design Thinking Framework for Teachly
                   <>
                     {/* Framework Introduction */}
                     <div className="bg-muted/50 rounded-lg p-6 border border-border">
                       <p className="text-muted-foreground leading-relaxed">
-                        {(project.research as any).introduction}
+                        {(project as any).research.introduction}
                       </p>
                     </div>
 
                     {/* Design Thinking Diagram */}
                     <div className="rounded-lg overflow-hidden shadow-md bg-white p-8">
                       <img
-                        src={project.research.image}
+                        src={(project as any).research.image}
                         alt="Design Thinking Framework"
                         className="w-full max-w-4xl mx-auto"
                       />
@@ -658,7 +658,7 @@ const ProjectCaseStudy = () => {
 
                     {/* Design Thinking Phases */}
                     <div className="space-y-6">
-                      {(project.research as any).phases.map((phase: any, index: number) => (
+                      {(project as any).research.phases.map((phase: any, index: number) => (
                         <Card key={index} className="border-l-4 border-l-primary">
                           <CardContent className="pt-6">
                             <div className="flex items-start gap-4 mb-4">
@@ -930,12 +930,13 @@ const ProjectCaseStudy = () => {
             </section>
 
             {/* Project Goals */}
+            {'projectGoals' in project && (
             <section>
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 Project Goals
               </h2>
               <ul className="space-y-3">
-                {project.projectGoals.map((goal, index) => (
+                {(project as any).projectGoals.map((goal: string, index: number) => (
                   <li key={index} className="flex items-start space-x-3">
                     <Target className="text-primary mt-1 flex-shrink-0" size={18} />
                     <span className="text-muted-foreground text-lg">{goal}</span>
@@ -943,6 +944,7 @@ const ProjectCaseStudy = () => {
                 ))}
               </ul>
             </section>
+            )}
 
             {/* Information Architecture & Diagrams */}
             {isTeachlyProject && (project as any).informationArchitecture ? (
@@ -978,7 +980,7 @@ const ProjectCaseStudy = () => {
                     </p>
                     <div className="rounded-lg overflow-hidden shadow-md bg-background p-4">
                       <img
-                        src={project.userFlow.image}
+                        src={(project as any).userFlow.image}
                         alt="User Flow diagram"
                         className="w-full"
                       />
@@ -1005,7 +1007,7 @@ const ProjectCaseStudy = () => {
                   </div>
                 </section>
               </>
-            ) : (
+            ) : ('userFlow' in project ? (
               // Thera: Show original Information Architecture and User Flow sections
               <>
                 {/* Information Architecture */}
@@ -1040,16 +1042,17 @@ const ProjectCaseStudy = () => {
                   </p>
                   <div className="rounded-lg overflow-hidden shadow-md">
                     <img
-                      src={project.userFlow.image}
+                      src={(project as any).userFlow.image}
                       alt="Task flow diagram showing booking journey"
                       className="w-full"
                     />
                   </div>
                 </section>
               </>
-            )}
+            ) : null)}
 
             {/* Wireframes */}
+            {'wireframes' in project && (
             <section>
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 Wireframes
@@ -1058,7 +1061,7 @@ const ProjectCaseStudy = () => {
                 <div>
                   <h3 className="font-semibold text-xl text-foreground mb-4">Low Fidelity</h3>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {project.wireframes.low.map((wireframe, index) => (
+                    {(project as any).wireframes.low.map((wireframe: string, index: number) => (
                       <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                         <img
                           src={wireframe}
@@ -1071,9 +1074,10 @@ const ProjectCaseStudy = () => {
                 </div>
               </div>
             </section>
+            )}
 
             {/* Final UI Design */}
-            {project.wireframes?.high && project.wireframes.high.length > 0 && (
+            {'wireframes' in project && (project as any).wireframes?.high && (project as any).wireframes.high.length > 0 && (
               <section>
                 <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                   Final UI Design
@@ -1081,7 +1085,7 @@ const ProjectCaseStudy = () => {
                 <div>
                   <h3 className="font-semibold text-xl text-foreground mb-4">High-fidelity Screens</h3>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {project.wireframes.high.map((screen, index) => (
+                    {(project as any).wireframes.high.map((screen: string, index: number) => (
                       <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                         <img
                           src={screen}
@@ -1096,12 +1100,13 @@ const ProjectCaseStudy = () => {
             )}
 
             {/* Usability Testing */}
+            {'usabilityTesting' in project && (
             <section>
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 Usability Testing & Iterations
               </h2>
               <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-                {project.usabilityTesting.description}
+                {(project as any).usabilityTesting.description}
               </p>
               
               {/* Participant Findings */}
@@ -1111,7 +1116,7 @@ const ProjectCaseStudy = () => {
                   Key Findings
                 </h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                  {project.usabilityTesting.findings.map((finding, index) => (
+                  {(project as any).usabilityTesting.findings.map((finding: any, index: number) => (
                     <Card key={index} className="border-l-4 border-l-primary/60 bg-card/50">
                       <CardContent className="p-6">
                         <div className="flex items-start gap-3">
@@ -1136,7 +1141,7 @@ const ProjectCaseStudy = () => {
                   Improvements Made
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
-                  {project.usabilityTesting.improvements.map((improvement, index) => (
+                  {(project as any).usabilityTesting.improvements.map((improvement: any, index: number) => (
                     <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                       <CardContent className="p-6">
                         <div className="mb-4 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
@@ -1150,14 +1155,16 @@ const ProjectCaseStudy = () => {
                 </div>
               </div>
             </section>
+            )}
 
             {/* Key Takeaways */}
+            {'keyTakeaways' in project && (
             <section className="pb-12">
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 Key Takeaways
               </h2>
               <ul className="space-y-3">
-                {project.keyTakeaways.map((takeaway, index) => (
+                {(project as any).keyTakeaways.map((takeaway: string, index: number) => (
                   <li key={index} className="flex items-start space-x-3">
                     <Lightbulb className="text-primary mt-1 flex-shrink-0" size={18} />
                     <span className="text-muted-foreground text-lg">{takeaway}</span>
@@ -1165,6 +1172,7 @@ const ProjectCaseStudy = () => {
                 ))}
               </ul>
             </section>
+            )}
           </div>
         </div>
       </div>
