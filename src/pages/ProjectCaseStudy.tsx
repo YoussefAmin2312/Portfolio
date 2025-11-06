@@ -1220,8 +1220,8 @@ const ProjectCaseStudy = () => {
               </section>
             )}
 
-            {/* Wireframes */}
-            {'wireframes' in project && (
+            {/* Wireframes (Thera/Teachly only) */}
+            {'wireframes' in project && projectId !== 'book-heaven' && (
             <section>
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 Wireframes
@@ -1245,8 +1245,8 @@ const ProjectCaseStudy = () => {
             </section>
             )}
 
-            {/* Final UI Design */}
-            {'wireframes' in project && (project as any).wireframes?.high && (project as any).wireframes.high.length > 0 && (
+            {/* Final UI Design (Thera/Teachly only) */}
+            {'wireframes' in project && projectId !== 'book-heaven' && (project as any).wireframes?.high && (project as any).wireframes.high.length > 0 && (
               <section>
                 <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                   Final UI Design
