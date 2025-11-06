@@ -4,7 +4,7 @@ import { ArrowLeft, ExternalLink, Github, Calendar, Users, Code, Target, Lightbu
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import bookHeavenImg from '@/assets/book-heaven-project.jpg';
+import vernxCoverImg from '@/assets/vernx-cover.jpg';
 import mendAiImg from '@/assets/mend-ai-project.jpg';
 import theraImg from '@/assets/thera-project.png';
 import theraDemoVideo from '@/assets/thera-demo-video.mp4';
@@ -95,7 +95,7 @@ const ProjectCaseStudy = () => {
     'book-heaven': {
       title: 'VernX',
       subtitle: 'Luxury Real Estate Website',
-      image: bookHeavenImg,
+      image: vernxCoverImg,
       category: 'UI/UX Design',
       duration: '3 weeks',
       team: '1 designer',
