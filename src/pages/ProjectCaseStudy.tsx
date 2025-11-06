@@ -71,8 +71,12 @@ import leanUxDiagramImg from '@/assets/lean-ux-diagram.png';
 import vernxInfoArchImg from '@/assets/vernx-information-architecture.png';
 import vernxTaskFlowImg from '@/assets/vernx-task-flow.png';
 import vernxUserFlowImg from '@/assets/vernx-user-flow.png';
-import vernxWireframeHome from '@/assets/vernx-wireframe-home.png';
-import vernxWireframePropertyDetail from '@/assets/vernx-wireframe-property-detail.png';
+import vernxWireframe1 from '@/assets/vernx-wireframe-1.png';
+import vernxWireframe2 from '@/assets/vernx-wireframe-2.png';
+import vernxWireframe3 from '@/assets/vernx-wireframe-3.png';
+import vernxWireframe4 from '@/assets/vernx-wireframe-4.png';
+import vernxWireframe5 from '@/assets/vernx-wireframe-5.png';
+import vernxWireframe6 from '@/assets/vernx-wireframe-6.png';
 import vernxHighHome from '@/assets/vernx-high-home.png';
 import vernxHighFeaturedProperties from '@/assets/vernx-high-featured-properties.png';
 import vernxHighReviews from '@/assets/vernx-high-reviews.png';
@@ -128,12 +132,28 @@ const ProjectCaseStudy = () => {
       },
       wireframes: [
         {
-          description: 'Homepage wireframe showcasing the main hero section with search functionality and featured property listings.',
-          image: vernxWireframeHome
+          description: 'Homepage wireframe showcasing the main hero section with search functionality and clean navigation.',
+          image: vernxWireframe1
         },
         {
-          description: 'Property detail page wireframe displaying property images, description, key features, contact agent section, and payment information breakdown.',
-          image: vernxWireframePropertyDetail
+          description: 'Featured properties listing page displaying property cards with images, details, and pricing information.',
+          image: vernxWireframe2
+        },
+        {
+          description: 'Client reviews section featuring testimonials with ratings and customer feedback carousel.',
+          image: vernxWireframe3
+        },
+        {
+          description: 'Property detail page with image gallery, property specifications, and key features list.',
+          image: vernxWireframe4
+        },
+        {
+          description: 'Contact agent section with agent information and property cost breakdown including fees and monthly expenses.',
+          image: vernxWireframe5
+        },
+        {
+          description: 'Additional fees and FAQ section providing transparent cost information and common questions.',
+          image: vernxWireframe6
         }
       ],
       highFidelityUI: [
