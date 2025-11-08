@@ -643,14 +643,14 @@ const ProjectCaseStudy = () => {
     return (
       <div className="min-h-screen bg-background">
         {/* Hero Header with Cover Image */}
-        <div className={`relative w-full ${isTeachlyProject ? 'h-[90vh] min-h-[700px] bg-gradient-to-br from-purple-600 via-purple-400 to-blue-400' : 'h-[50vh] min-h-[400px] max-h-[600px]'}`}>
+        <div className={`relative w-full ${isTeachlyProject ? 'h-[50vh] min-h-[400px] max-h-[600px] bg-gradient-to-br from-purple-600 via-purple-400 to-blue-400' : 'h-[50vh] min-h-[400px] max-h-[600px]'}`}>
           {isTeachlyProject ? (
             <>
               <div className="w-full h-full flex items-center justify-center px-8">
                 <img
                   src={headerImage}
                   alt={project.title}
-                  className="max-w-3xl w-full h-auto object-contain"
+                  className="max-w-2xl w-full h-auto object-contain"
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"
