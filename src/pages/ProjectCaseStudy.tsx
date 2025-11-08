@@ -703,19 +703,19 @@ const ProjectCaseStudy = () => {
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 Project Overview
               </h2>
-              <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px] mb-6">
+              <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] mb-6 font-medium">
                 {project.overview}
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <Card>
                   <CardContent className="pt-6">
-                    <h3 className="font-semibold text-foreground mb-2">Role</h3>
-                    <p className="text-muted-foreground">{project.role}</p>
+                    <h3 className="font-semibold text-foreground text-lg mb-2">Role</h3>
+                    <p className="text-foreground text-base">{project.role}</p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardContent className="pt-6">
-                    <h3 className="font-semibold text-foreground mb-2">Tools</h3>
+                    <h3 className="font-semibold text-foreground text-lg mb-2">Tools</h3>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, index) => (
                         <Badge key={index} variant="outline">{tech}</Badge>
@@ -732,7 +732,7 @@ const ProjectCaseStudy = () => {
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 {isTeachlyProject ? 'The Challenge' : 'The Problem'}
               </h2>
-              <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px] whitespace-pre-line">
+              <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] whitespace-pre-line font-medium">
                 {(project as any).problem}
               </p>
             </section>
@@ -763,7 +763,7 @@ const ProjectCaseStudy = () => {
                         <Card key={index} className="border-l-4 border-l-primary">
                           <CardContent className="pt-6">
                             <h3 className="font-semibold text-xl text-foreground mb-3">{phase.title}</h3>
-                            <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                            <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                               {phase.description}
                             </p>
                           </CardContent>
@@ -776,7 +776,7 @@ const ProjectCaseStudy = () => {
                   <>
                     {/* Framework Introduction */}
                     <div className="bg-muted/50 rounded-lg p-6 border border-border">
-                      <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                      <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                         {(project as any).research.introduction}
                       </p>
                     </div>
@@ -801,7 +801,7 @@ const ProjectCaseStudy = () => {
                               </div>
                               <div className="flex-1">
                                 <h3 className="font-semibold text-xl text-foreground mb-2">{phase.title}</h3>
-                                <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                                <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                                   {phase.description}
                                 </p>
                                 {phase.points && (
@@ -809,7 +809,7 @@ const ProjectCaseStudy = () => {
                                     {phase.points.map((point, idx) => (
                                       <li key={idx} className="flex items-start gap-2">
                                         <span className="text-primary mt-1">•</span>
-                                        <span className="text-muted-foreground text-sm">{point}</span>
+                                        <span className="text-foreground text-base">{point}</span>
                                       </li>
                                     ))}
                                   </ul>
@@ -833,7 +833,7 @@ const ProjectCaseStudy = () => {
                   <>
                     {/* Framework Introduction */}
                     <div className="bg-muted/50 rounded-lg p-6 border border-border">
-                      <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                      <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                         I structured my process using the <span className="font-semibold text-foreground">Double Diamond framework</span>, which separates the design journey into exploring the problem space and then shaping the solution space.
                       </p>
                     </div>
@@ -858,20 +858,20 @@ const ProjectCaseStudy = () => {
                             </div>
                             <div>
                               <h3 className="font-semibold text-xl text-foreground">Discover (Diverge)</h3>
-                              <p className="text-sm text-muted-foreground">Exploring the problem space</p>
+                              <p className="text-base text-foreground">Exploring the problem space</p>
                             </div>
                           </div>
-                          <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px] mb-4">
+                          <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium mb-4">
                             I began by exploring the problem space broadly, conducting user research to understand barriers to therapy. Through surveys and informal interviews, I uncovered two key insights:
                           </p>
                           <ul className="space-y-2">
                             <li className="flex items-start gap-2">
                               <span className="text-primary mt-1">•</span>
-                              <span className="text-muted-foreground text-sm">Many users, especially in the Middle East, face cultural stigma around seeking therapy.</span>
+                              <span className="text-foreground text-base">Many users, especially in the Middle East, face cultural stigma around seeking therapy.</span>
                             </li>
                             <li className="flex items-start gap-2">
                               <span className="text-primary mt-1">•</span>
-                              <span className="text-muted-foreground text-sm">Even those willing to seek help struggle with confusing booking processes and lack of transparency about therapists.</span>
+                              <span className="text-foreground text-base">Even those willing to seek help struggle with confusing booking processes and lack of transparency about therapists.</span>
                             </li>
                           </ul>
                         </CardContent>
@@ -886,10 +886,10 @@ const ProjectCaseStudy = () => {
                             </div>
                             <div>
                               <h3 className="font-semibold text-xl text-foreground">Define (Converge)</h3>
-                              <p className="text-sm text-muted-foreground">Synthesizing the problem</p>
+                              <p className="text-base text-foreground">Synthesizing the problem</p>
                             </div>
                           </div>
-                          <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px] mb-4">
+                          <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium mb-4">
                             I synthesized the research into a clear problem statement:
                           </p>
                           <div className="bg-accent/5 rounded-lg p-4 border-l-2 border-accent">
@@ -909,10 +909,10 @@ const ProjectCaseStudy = () => {
                             </div>
                             <div>
                               <h3 className="font-semibold text-xl text-foreground">Develop (Diverge)</h3>
-                              <p className="text-sm text-muted-foreground">Generating solutions</p>
+                              <p className="text-base text-foreground">Generating solutions</p>
                             </div>
                           </div>
-                          <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                          <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                             I generated potential solutions, mapping user flows (booking sessions, managing appointments) and sketching low-fidelity wireframes to explore different design directions.
                           </p>
                         </CardContent>
@@ -927,10 +927,10 @@ const ProjectCaseStudy = () => {
                             </div>
                             <div>
                               <h3 className="font-semibold text-xl text-foreground">Deliver (Converge)</h3>
-                              <p className="text-sm text-muted-foreground">Refining the solution</p>
+                              <p className="text-base text-foreground">Refining the solution</p>
                             </div>
                           </div>
-                          <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                          <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                             I refined the best solution into high-fidelity prototypes and conducted usability testing. Feedback helped me iterate on the therapist selection flow and homepage scheduling, ensuring the app felt both intuitive and discreet.
                           </p>
                         </CardContent>
@@ -965,16 +965,16 @@ const ProjectCaseStudy = () => {
                               <h3 className="font-semibold text-xl text-foreground">
                                 {persona.name}
                               </h3>
-                              <p className="text-sm text-muted-foreground">
+                              <p className="text-base text-foreground">
                                 {persona.age} years old, {persona.occupation}
                               </p>
                               {persona.location && (
-                                <p className="text-sm text-muted-foreground">
+                                <p className="text-base text-foreground">
                                   {persona.location}
                                 </p>
                               )}
                             </div>
-                            <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                            <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                               {persona.bio}
                             </p>
                           </div>
@@ -987,7 +987,7 @@ const ProjectCaseStudy = () => {
                               {persona.goals.map((goal: string, idx: number) => (
                                 <li key={idx} className="flex items-start space-x-2">
                                   <span className="text-primary mt-1">✓</span>
-                                  <span className="text-muted-foreground text-sm">{goal}</span>
+                                  <span className="text-foreground text-base">{goal}</span>
                                 </li>
                               ))}
                             </ul>
@@ -998,7 +998,7 @@ const ProjectCaseStudy = () => {
                               {persona.frustrations.map((frustration: string, idx: number) => (
                                 <li key={idx} className="flex items-start space-x-2">
                                   <AlertCircle className="text-destructive mt-0.5 flex-shrink-0" size={16} />
-                                  <span className="text-muted-foreground text-sm">{frustration}</span>
+                                  <span className="text-foreground text-base">{frustration}</span>
                                 </li>
                               ))}
                             </ul>
@@ -1025,11 +1025,11 @@ const ProjectCaseStudy = () => {
                           <h3 className="font-semibold text-xl text-foreground">
                             {(project as any).persona.name}
                           </h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-base text-foreground">
                             {(project as any).persona.age} years old, {(project as any).persona.occupation}
                           </p>
                         </div>
-                        <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                        <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                           {(project as any).persona.bio}
                         </p>
                       </div>
@@ -1042,7 +1042,7 @@ const ProjectCaseStudy = () => {
                           {(project as any).persona.goals.map((goal: string, index: number) => (
                             <li key={index} className="flex items-start space-x-2">
                               <span className="text-primary mt-1">✓</span>
-                              <span className="text-muted-foreground text-sm">{goal}</span>
+                              <span className="text-foreground text-base">{goal}</span>
                             </li>
                           ))}
                         </ul>
@@ -1053,7 +1053,7 @@ const ProjectCaseStudy = () => {
                           {(project as any).persona.frustrations.map((frustration: string, index: number) => (
                             <li key={index} className="flex items-start space-x-2">
                               <AlertCircle className="text-destructive mt-0.5 flex-shrink-0" size={16} />
-                              <span className="text-muted-foreground text-sm">{frustration}</span>
+                              <span className="text-foreground text-base">{frustration}</span>
                             </li>
                           ))}
                         </ul>
@@ -1075,7 +1075,7 @@ const ProjectCaseStudy = () => {
                 {(project as any).projectGoals.map((goal: string, index: number) => (
                   <li key={index} className="flex items-start space-x-3">
                     <Target className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">{goal}</span>
+                    <span className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">{goal}</span>
                   </li>
                 ))}
               </ul>
@@ -1092,7 +1092,7 @@ const ProjectCaseStudy = () => {
                     Information Architecture
                   </h2>
                   <div className="space-y-6">
-                    <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                    <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                       {(project as any).informationArchitecture.description}
                     </p>
                     <div className="rounded-lg overflow-hidden shadow-md bg-background p-4">
@@ -1111,7 +1111,7 @@ const ProjectCaseStudy = () => {
                     User Flow
                   </h2>
                   <div className="space-y-6">
-                    <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                    <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                       {(project as any).userFlow.description}
                     </p>
                     <div className="rounded-lg overflow-hidden shadow-md bg-background p-4">
@@ -1130,7 +1130,7 @@ const ProjectCaseStudy = () => {
                     Task Flow
                   </h2>
                   <div className="space-y-6">
-                    <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                    <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                       {(project as any).taskFlow.description}
                     </p>
                     <div className="rounded-lg overflow-hidden shadow-md bg-background p-4">
@@ -1151,7 +1151,7 @@ const ProjectCaseStudy = () => {
                   <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                     Information Architecture
                   </h2>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-foreground text-base mb-6">
                     This diagram illustrates the hierarchical structure of VernX's navigation, showing how users can access different sections from the home page and navigate to property details through the Rent and Buy options.
                   </p>
                   <div className="rounded-lg overflow-hidden shadow-md bg-background p-4">
@@ -1169,7 +1169,7 @@ const ProjectCaseStudy = () => {
                   <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                     Task Flow
                   </h2>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-foreground text-base mb-6">
                     The task flow outlines the step-by-step process users follow to complete key actions on VernX, from browsing properties to scheduling viewings or making inquiries.
                   </p>
                   <div className="rounded-lg overflow-hidden shadow-md bg-background p-4">
@@ -1188,7 +1188,7 @@ const ProjectCaseStudy = () => {
                   <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                     User Flow
                   </h2>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-foreground text-base mb-6">
                     This flow maps the user's journey through VernX, highlighting decision points and interactions as they search, filter, and engage with property listings.
                   </p>
                   <div className="rounded-lg overflow-hidden shadow-md bg-background p-4">
@@ -1210,10 +1210,10 @@ const ProjectCaseStudy = () => {
                     Information Architecture
                   </h2>
                   <div className="space-y-6">
-                    <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                    <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                       This information architecture represents the structure of a therapy booking application designed to make it easy for users to connect with therapists either online or in person. The goal was to create a simple, intuitive flow that minimizes friction from login to session booking.
                     </p>
-                    <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                    <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                       The flow starts with the authentication process, where users can log in using email or social accounts (Google, Apple, or Facebook), reset their password, or sign up for a new account.
                     </p>
                     <div className="rounded-lg overflow-hidden shadow-md bg-background p-4">
@@ -1231,7 +1231,7 @@ const ProjectCaseStudy = () => {
                   <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                     User Flow / Task Flow
                   </h2>
-                  <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px] mb-6">
+                  <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium mb-6">
                     The flow includes the search of a specific doctor through filters; the choice of doctor and time slot and finally the checkout.
                   </p>
                   <div className="rounded-lg overflow-hidden shadow-md">
@@ -1251,13 +1251,13 @@ const ProjectCaseStudy = () => {
                 <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                   Wireframes
                 </h2>
-                <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px] mb-8">
+                <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium mb-8">
                   These wireframes showcase the foundational layout and structure of the VernX platform. Each screen was designed to prioritize clarity and ease of navigation, ensuring users can browse properties and access key information without unnecessary complexity.
                 </p>
                 <div className="space-y-8">
                   {(project as any).wireframes.map((wireframe: any, index: number) => (
                     <div key={index} className="space-y-4">
-                      <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                      <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                         {wireframe.description}
                       </p>
                       <div className="rounded-lg overflow-hidden shadow-md bg-background p-4">
@@ -1279,13 +1279,13 @@ const ProjectCaseStudy = () => {
                 <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                   High-Fidelity UI Design
                 </h2>
-                <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px] mb-8">
+                <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium mb-8">
                   The high-fidelity designs bring VernX to life with polished visuals, refined typography, and a cohesive color palette. These screens represent the final user interface, designed to convey luxury and professionalism while maintaining intuitive functionality.
                 </p>
                 <div className="space-y-8">
                   {(project as any).highFidelityUI.map((screen: any, index: number) => (
                     <div key={index} className="space-y-4">
-                      <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+                      <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                         {screen.description}
                       </p>
                       <div className="rounded-lg overflow-hidden shadow-md bg-background">
@@ -1355,7 +1355,7 @@ const ProjectCaseStudy = () => {
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 Usability Testing & Iterations
               </h2>
-              <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px] mb-8">
+              <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium mb-8">
                 {(project as any).usabilityTesting.description}
               </p>
               
@@ -1375,7 +1375,7 @@ const ProjectCaseStudy = () => {
                           </div>
                           <div>
                             <h4 className="font-semibold text-foreground mb-2">{finding.participant}</h4>
-                            <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">"{finding.feedback}"</p>
+                            <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">"{finding.feedback}"</p>
                           </div>
                         </div>
                       </CardContent>
@@ -1398,7 +1398,7 @@ const ProjectCaseStudy = () => {
                           <Target className="text-primary" size={24} />
                         </div>
                         <h4 className="font-semibold text-foreground text-lg mb-2">{improvement.title}</h4>
-                        <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">{improvement.description}</p>
+                        <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">{improvement.description}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -1417,7 +1417,7 @@ const ProjectCaseStudy = () => {
                 {(project as any).keyTakeaways.map((takeaway: string, index: number) => (
                   <li key={index} className="flex items-start space-x-3">
                     <Lightbulb className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">{takeaway}</span>
+                    <span className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">{takeaway}</span>
                   </li>
                 ))}
               </ul>
@@ -1476,7 +1476,7 @@ const ProjectCaseStudy = () => {
               <h2 className="font-heading font-bold text-2xl text-foreground mb-4">
                 Project Overview
               </h2>
-              <p className="text-black text-[18.5px] leading-[1.9] tracking-[0.25px]">
+              <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
                 {project.overview}
               </p>
             </section>
