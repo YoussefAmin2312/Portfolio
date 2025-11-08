@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import ImageZoomDialog from '@/components/ImageZoomDialog';
+import Navigation from '@/components/Navigation';
 
 import vernxCoverImg from '@/assets/vernx-cover.jpg';
 import mendAiImg from '@/assets/mend-ai-project.jpg';
@@ -89,17 +90,9 @@ const ProjectCaseStudy = () => {
   const { projectId } = useParams();
   const navigate = useNavigate();
   const [zoomImage, setZoomImage] = useState<{ src: string; alt: string } | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, [projectId]);
 
   const handleImageClick = (src: string, alt: string) => {
@@ -648,36 +641,17 @@ const ProjectCaseStudy = () => {
     
     return (
       <div className="min-h-screen bg-background">
+        <Navigation />
+        
         <ImageZoomDialog
           open={!!zoomImage}
           onOpenChange={(open) => !open && setZoomImage(null)}
           imageSrc={zoomImage?.src || ''}
           imageAlt={zoomImage?.alt || ''}
         />
-        
-        {/* Sticky Navigation */}
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'translate-y-0 bg-background/90 backdrop-blur-lg border-b border-border shadow-md' : '-translate-y-full'}`}>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <button 
-                onClick={() => navigate('/')}
-                className="font-heading font-bold text-xl text-foreground hover:text-primary transition-colors"
-              >
-                Youssef Yasser
-              </button>
-              <Button 
-                variant="ghost" 
-                onClick={() => navigate('/')}
-              >
-                <ArrowLeft size={16} className="mr-2" />
-                Back to Portfolio
-              </Button>
-            </div>
-          </div>
-        </nav>
 
         {/* Hero Header with Cover Image */}
-        <div className={`relative w-full ${isTeachlyProject ? 'h-[50vh] min-h-[400px] max-h-[600px] bg-gradient-to-br from-purple-600 via-purple-400 to-blue-400' : 'h-[50vh] min-h-[400px] max-h-[600px]'}`}>
+        <div className={`relative w-full mt-16 ${isTeachlyProject ? 'h-[50vh] min-h-[400px] max-h-[600px] bg-gradient-to-br from-purple-600 via-purple-400 to-blue-400' : 'h-[50vh] min-h-[400px] max-h-[600px]'}`}>
           {isTeachlyProject ? (
             <>
               <div className="w-full h-full flex items-center justify-center px-8">
@@ -1468,17 +1442,11 @@ const ProjectCaseStudy = () => {
   // Render traditional project case study
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+      
       {/* Header */}
-      <div className="bg-muted/30 py-8">
+      <div className="bg-muted/30 py-8 mt-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Button 
-            variant="ghost" 
-            onClick={() => navigate('/')}
-            className="mb-6"
-          >
-            <ArrowLeft size={16} className="mr-2" />
-            Back to Portfolio
-          </Button>
           
           <div className="flex items-center gap-4 mb-4">
             <Badge variant="secondary">{project.category}</Badge>
