@@ -650,7 +650,7 @@ const ProjectCaseStudy = () => {
                 <img
                   src={headerImage}
                   alt={project.title}
-                  className="max-w-2xl w-full h-auto object-contain"
+                  className="max-w-xl w-full h-auto object-contain"
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"
