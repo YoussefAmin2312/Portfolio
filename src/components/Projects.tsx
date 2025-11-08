@@ -5,11 +5,11 @@ import teachlyImg from '@/assets/teachly-project.jpg';
 const Projects = () => {
   const navigate = useNavigate();
   const projects = [{
-    id: 'book-heaven',
-    title: 'VernX',
-    description: 'Luxury Real Estate Website',
-    image: vernxCoverImg,
-    category: 'UI/UX Design'
+    id: 'teachly',
+    title: 'Teachly',
+    description: 'Language learning platform connecting students with tutors',
+    image: teachlyImg,
+    category: 'Education'
   }, {
     id: 'thera',
     title: 'Thera',
@@ -17,11 +17,11 @@ const Projects = () => {
     image: theraImg,
     category: 'Healthcare'
   }, {
-    id: 'teachly',
-    title: 'Teachly',
-    description: 'Language learning platform connecting students with tutors',
-    image: teachlyImg,
-    category: 'Education'
+    id: 'book-heaven',
+    title: 'VernX',
+    description: 'Luxury Real Estate Website',
+    image: vernxCoverImg,
+    category: 'UI/UX Design'
   }];
   const handleProjectClick = (projectId: string) => {
     navigate(`/project/${projectId}`);
