@@ -1,15 +1,9 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { GraduationCap, Award, MapPin } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import aboutIntroImg from '@/assets/about-intro.jpg';
+import aboutPhilosophyImg from '@/assets/about-philosophy.jpg';
 
 const AboutPage = () => {
-  const certifications = [
-    'CCNA Certification',
-    'Flutter Development Certificate',
-    'UX Design Training',
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-subtle">
       <Navigation />
@@ -23,83 +17,75 @@ const AboutPage = () => {
             <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Bio Content */}
-            <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I am a computer engineer with practical experience in UI/UX and mobile app development. 
-                I have built apps with real-time data, authentication, and clean UI/UX design principles.
-              </p>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                My expertise spans across Flutter development, Firebase integration, and user-centered 
-                design methodologies. I believe in creating digital experiences that are not only 
-                functional but also intuitive and delightful for users.
-              </p>
+          {/* Main Story Section with Images */}
+          <div className="grid lg:grid-cols-12 gap-8 items-start max-w-7xl mx-auto">
+            {/* Left Tall Image */}
+            <div className="lg:col-span-3 order-2 lg:order-1">
+              <div className="sticky top-24">
+                <img
+                  src={aboutIntroImg}
+                  alt="Youssef Yasser"
+                  className="w-full h-[600px] object-cover rounded-2xl shadow-elegant hover-lift"
+                  loading="eager"
+                />
+              </div>
+            </div>
 
-              {/* Education & Location */}
-              <div className="space-y-4 pt-6">
-                <div className="flex items-center space-x-3">
-                  <GraduationCap className="text-primary" size={24} />
-                  <div>
-                    <h4 className="font-semibold text-foreground">British University in Egypt</h4>
-                    <p className="text-muted-foreground">Dual certificate with London South Bank University</p>
-                  </div>
-                </div>
+            {/* Center Content */}
+            <div className="lg:col-span-6 order-1 lg:order-2 space-y-8">
+              <div className="space-y-6">
+                <p className="text-lg text-foreground leading-relaxed font-medium">
+                  I'm <span className="text-primary font-semibold">Youssef Yasser</span>, a UI/UX designer and developer from Egypt, born in the UAE in 2003. My passion for design started early through drawing and creating — it naturally evolved into a fascination with how art and engineering intersect to shape meaningful user experiences.
+                </p>
                 
-                <div className="flex items-center space-x-3">
-                  <MapPin className="text-primary" size={24} />
-                  <div>
-                    <p className="text-muted-foreground">Open to opportunities in UAE, Canada, and globally</p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  I believe great design starts with visual connection. The way something looks is what first captures attention, and that moment of attention is where impact begins. My work focuses on creating interfaces that are both functional and visually balanced.
+                </p>
+
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Inspired by architecture like the Burj Khalifa and traditional Egyptian art, my design philosophy blends heritage with modern minimalism, reflecting a harmony between culture, modesty, and innovation.
+                </p>
+
+                <p className="text-lg text-muted-foreground leading-relaxed italic border-l-4 border-primary pl-6">
+                  Design, to me, is a way of communicating values — connecting the past to the future through clarity and purpose.
+                </p>
+              </div>
+
+              {/* Design Philosophy Highlight */}
+              <div className="bg-gradient-card p-8 rounded-2xl border border-border/50 shadow-card mt-12">
+                <h3 className="font-heading font-semibold text-2xl text-foreground mb-4">
+                  Design Philosophy
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                    <p className="text-muted-foreground">Visual connection as the foundation of engagement</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                    <p className="text-muted-foreground">Balance between functionality and aesthetics</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                    <p className="text-muted-foreground">Heritage meets modern minimalism</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                    <p className="text-muted-foreground">Purposeful design that communicates values</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Certifications */}
-            <div className="space-y-6">
-              <h3 className="font-heading font-semibold text-2xl text-foreground mb-6">
-                Certifications & Training
-              </h3>
-              
-              <div className="grid gap-4">
-                {certifications.map((cert, index) => (
-                  <Card key={index} className="hover-lift bg-gradient-card border-0 shadow-card">
-                    <CardContent className="p-6">
-                      <div className="flex items-center space-x-4">
-                        <div className="bg-gradient-primary p-3 rounded-full">
-                          <Award className="text-white" size={24} />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-foreground">{cert}</h4>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              {/* Key Highlights */}
-              <div className="bg-gradient-primary p-6 rounded-xl text-white mt-8">
-                <h4 className="font-heading font-semibold text-xl mb-4">Key Highlights</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-white/80">•</span>
-                    <span>Led team projects during Flutter internship</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-white/80">•</span>
-                    <span>Experience with real-time data and authentication systems</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-white/80">•</span>
-                    <span>Strong foundation in networking and database systems</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-white/80">•</span>
-                    <span>Business exposure through car dealership work</span>
-                  </li>
-                </ul>
+            {/* Right Tall Image */}
+            <div className="lg:col-span-3 order-3">
+              <div className="sticky top-24">
+                <img
+                  src={aboutPhilosophyImg}
+                  alt="Design Philosophy"
+                  className="w-full h-[600px] object-cover rounded-2xl shadow-elegant hover-lift"
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
