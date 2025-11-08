@@ -650,13 +650,13 @@ const ProjectCaseStudy = () => {
                 <img
                   src={headerImage}
                   alt={project.title}
-                  className="max-w-xl w-full h-auto object-contain"
+                  className="max-w-md w-full h-auto object-contain"
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-background/90 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-background pointer-events-none" />
             </>
           ) : (
             <>
