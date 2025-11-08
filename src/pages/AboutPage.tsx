@@ -1,12 +1,26 @@
-import Navigation from '@/components/Navigation';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 import Footer from '@/components/Footer';
 import aboutIntroImg from '@/assets/about-intro.jpg';
 import aboutPhilosophyImg from '@/assets/about-philosophy.jpg';
+
 const AboutPage = () => {
+  const navigate = useNavigate();
+
   return <div className="min-h-screen bg-gradient-subtle">
-      <Navigation />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <Button
+          onClick={() => navigate('/')}
+          variant="ghost"
+          className="group"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
+          Back to Portfolio
+        </Button>
+      </div>
       
-      <section className="py-20">
+      <section className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-foreground mb-6">
