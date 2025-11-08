@@ -1,8 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Experience = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -10,13 +13,12 @@ const Experience = () => {
 
     let animationFrameId: number;
     let scrollPosition = 0;
-    const scrollSpeed = 0.5; // Adjust speed here (pixels per frame)
+    const scrollSpeed = 0.5;
 
     const autoScroll = () => {
-      if (scrollContainer) {
+      if (scrollContainer && !isDragging) {
         scrollPosition += scrollSpeed;
         
-        // Reset scroll position when halfway through (seamless loop)
         const maxScroll = scrollContainer.scrollWidth / 2;
         if (scrollPosition >= maxScroll) {
           scrollPosition = 0;
@@ -29,7 +31,6 @@ const Experience = () => {
 
     animationFrameId = requestAnimationFrame(autoScroll);
 
-    // Pause on hover
     const handleMouseEnter = () => cancelAnimationFrame(animationFrameId);
     const handleMouseLeave = () => {
       animationFrameId = requestAnimationFrame(autoScroll);
@@ -43,7 +44,30 @@ const Experience = () => {
       scrollContainer?.removeEventListener('mouseenter', handleMouseEnter);
       scrollContainer?.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, []);
+  }, [isDragging]);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
 
   const experiences = [
     {
@@ -84,8 +108,12 @@ const Experience = () => {
         {/* Horizontal auto-scrolling experience cards */}
         <div 
           ref={scrollRef}
-          className="overflow-x-auto pb-6 scrollbar-hide cursor-grab active:cursor-grabbing"
+          className={`overflow-x-auto pb-6 scrollbar-hide ${isDragging ? 'cursor-grabbing' : 'cursor-grab'} select-none`}
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
         >
           <div className="flex gap-6 min-w-max">
             {/* Render cards twice for seamless loop */}
