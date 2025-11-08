@@ -1,6 +1,50 @@
+import { useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Experience = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let animationFrameId: number;
+    let scrollPosition = 0;
+    const scrollSpeed = 0.5; // Adjust speed here (pixels per frame)
+
+    const autoScroll = () => {
+      if (scrollContainer) {
+        scrollPosition += scrollSpeed;
+        
+        // Reset scroll position when halfway through (seamless loop)
+        const maxScroll = scrollContainer.scrollWidth / 2;
+        if (scrollPosition >= maxScroll) {
+          scrollPosition = 0;
+        }
+        
+        scrollContainer.scrollLeft = scrollPosition;
+      }
+      animationFrameId = requestAnimationFrame(autoScroll);
+    };
+
+    animationFrameId = requestAnimationFrame(autoScroll);
+
+    // Pause on hover
+    const handleMouseEnter = () => cancelAnimationFrame(animationFrameId);
+    const handleMouseLeave = () => {
+      animationFrameId = requestAnimationFrame(autoScroll);
+    };
+
+    scrollContainer.addEventListener('mouseenter', handleMouseEnter);
+    scrollContainer.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      scrollContainer?.removeEventListener('mouseenter', handleMouseEnter);
+      scrollContainer?.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
   const experiences = [
     {
       title: 'UI/UX Designer Intern',
@@ -37,10 +81,15 @@ const Experience = () => {
           </h2>
         </div>
 
-        {/* Horizontal scrollable experience cards */}
-        <div className="overflow-x-auto pb-6">
+        {/* Horizontal auto-scrolling experience cards */}
+        <div 
+          ref={scrollRef}
+          className="overflow-x-auto pb-6 scrollbar-hide cursor-grab active:cursor-grabbing"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
           <div className="flex gap-6 min-w-max">
-            {experiences.map((experience, index) => (
+            {/* Render cards twice for seamless loop */}
+            {[...experiences, ...experiences].map((experience, index) => (
               <Card 
                 key={index} 
                 className="hover-lift bg-card border border-border shadow-md min-w-[320px] transition-all duration-300 hover:shadow-lg"
