@@ -319,17 +319,13 @@ const ProjectCaseStudy = () => {
           },
           {
             participant: 'Participant 2',
-            feedback: 'The voice assistant didn\'t feel clear about when it was listening or responding.'
+            feedback: 'The session details page felt overwhelming'
           }
         ],
         improvements: [
           {
             title: 'Simplified Booking Flow',
             description: 'Clearer therapist cards and session details for easier selection'
-          },
-          {
-            title: 'Visual Voice Cues',
-            description: 'Added indicators to show when the voice assistant is active'
           },
           {
             title: 'Enhanced Navigation',
@@ -339,7 +335,6 @@ const ProjectCaseStudy = () => {
       },
       keyTakeaways: [
         'Early user testing revealed critical pain points that shaped the final design',
-        'Clear communication of privacy features significantly increased user trust',
         'Iterative design process led to a 40% improvement in task completion rates'
       ]
     },
