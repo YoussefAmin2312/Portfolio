@@ -1,4 +1,4 @@
-import { Heart, Github, Linkedin, Mail } from 'lucide-react';
+import { Heart, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,13 +13,8 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      icon: <Github size={20} />,
-      href: 'https://github.com',
-      label: 'GitHub',
-    },
-    {
       icon: <Linkedin size={20} />,
-      href: 'https://linkedin.com',
+      href: 'https://linkedin.com', // Will be updated with user's LinkedIn URL
       label: 'LinkedIn',
     },
     {
@@ -109,11 +104,9 @@ const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-background/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-center items-center">
-            <p className="text-background/60 text-sm">
-              © {currentYear} Youssef Yasser. All rights reserved.
-            </p>
-          </div>
+          <p className="text-background/60 text-sm text-left">
+            © {currentYear} Youssef Yasser. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
