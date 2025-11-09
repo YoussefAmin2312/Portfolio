@@ -741,9 +741,9 @@ const ProjectCaseStudy = () => {
                       const prototypeSection = document.getElementById('prototype-section');
                       prototypeSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }}
-                    className="group relative bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-primary-foreground font-inter font-semibold text-lg px-10 py-7 rounded-xl shadow-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                    className="group bg-gradient-primary hover:opacity-90 text-white font-inter font-semibold text-lg px-10 py-7 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
                   >
-                    <span className="relative z-10 flex items-center gap-3">
+                    <span className="flex items-center gap-3">
                       <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12" 
@@ -756,7 +756,6 @@ const ProjectCaseStudy = () => {
                       </svg>
                       Test Interactive Prototype
                     </span>
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                   </Button>
                 </div>
               )}
