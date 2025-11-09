@@ -311,7 +311,7 @@ const ProjectCaseStudy = () => {
         ]
       },
       usabilityTesting: {
-        description: 'I conducted remote usability testing with two participants who matched the app\'s target audience—people seeking accessible and comfortable therapy options. Both were asked to complete key tasks such as creating an account, booking a session, and using the voice-based chat feature.',
+        description: 'I conducted remote usability testing with two participants who matched the app\'s target audience—people seeking accessible and comfortable therapy options. Both were asked to complete key tasks such as creating an account and booking a session.',
         findings: [
           {
             participant: 'Participant 1',
