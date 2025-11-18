@@ -100,144 +100,102 @@ const ProjectCaseStudy = () => {
   };
 
   const projects = {
-    'book-heaven': {
-      title: 'VernX',
-      subtitle: 'Luxury Real Estate Website',
+    'multipwr': {
+      title: 'MultiPWR',
+      subtitle: 'AI Productivity Tools Platform',
       image: vernxCoverImg,
       category: 'UI/UX Design',
       team: '1 designer',
       role: 'UI/UX Designer',
       technologies: ['Figma'],
-      overview: 'VernX is a luxury real estate website designed to make finding and purchasing property effortless and visually engaging. The platform allows users to browse premium listings, compare properties, and contact agents seamlessly. My goal was to design a clean, elegant interface that builds trust, simplifies navigation, and enhances the overall user experience for high-end buyers.',
-      problem: 'Many real estate websites overwhelm users with cluttered layouts, inconsistent visuals, and complex navigation. Users often struggle to find reliable property information, compare listings, or understand hidden costs. VernX was created to solve these issues by focusing on clarity, transparency, and a luxurious but simple browsing experience.',
+      overview: 'MultiPWR is an AI-powered productivity platform that combines email generation, grammar checking, and meeting notes in one seamless interface. The platform eliminates the need to switch between multiple tools, offering a consistent design system, easy navigation, and transparent feature explanations.',
+      problem: 'Most AI productivity tools are scattered across different platforms. Users constantly switch tabs between email generators, grammar checkers, and meeting note-taking apps. This slows down productivity and creates an inconsistent experience. MultiPWR solves this by offering all three tools in one place, with a consistent design system, easy navigation, and transparent feature explanations.',
       researchMethodology: 'Lean UX',
       leanUxDiagram: leanUxDiagramImg,
       leanUxPhases: [
         {
           title: '1. Think',
-          description: 'Before jumping into visuals, I started by understanding the users — people searching for reliable real estate listings without unnecessary complexity. I focused on defining clear goals: helping users browse, compare, and contact agents easily.'
+          description: 'I started by understanding what the core users needed: fast writing support, clean proofreading, and reliable meeting summaries. The goal was to remove unnecessary complexity and present the tools in a simple, intuitive layout.'
         },
         {
           title: '2. Make',
-          description: 'I quickly moved to wireframing and prototyping the main pages — home, property listings, and contact sections. Instead of overanalyzing, I tested designs early to see what worked best in terms of layout and navigation.'
+          description: 'I quickly built low-fidelity wireframes for the homepage, feature pages, and the individual AI tool screens. Instead of over-polishing early, I focused on rapid prototypes that allowed quick feedback on layout and hierarchy.'
         },
         {
           title: '3. Check',
-          description: 'After testing the prototype with a few users, I gathered feedback on usability and clarity. I refined button placements, improved image hierarchy, and simplified the filter section to make property discovery smoother and faster.'
+          description: 'After testing the prototype, I adjusted button placement, simplified the feature descriptions, and improved the layout of the Meeting AI tool to make the note-taking interaction feel more natural. These small refinements made the experience smoother and reduced friction for first-time users.'
         }
       ],
       projectGoals: [
-        'Make the browsing experience fast and intuitive for first-time visitors.',
-        'Build a layout that clearly showcases properties through visuals and structured information.',
-        'Ensure that users can easily contact agents or schedule visits directly from the listings page.',
-        'Maintain a professional, minimal aesthetic that aligns with real estate standards while staying unique to VernX\'s brand.'
+        'Create a platform where users can access all tools in one simple flow',
+        'Keep the interface minimal and intuitive, with no feature overload',
+        'Make the Meeting AI tool accessible and easy to use for students and professionals',
+        'Clearly communicate what each AI does through clean UI and microcopy',
+        'Ensure a consistent design system across all AI feature pages'
       ],
-      informationArchitecture: vernxInfoArchImg,
-      taskFlow: vernxTaskFlowImg,
-      userFlow: {
-        image: vernxUserFlowImg
-      },
       persona: {
-        name: 'Ahmed Saleh',
-        age: 24,
-        occupation: 'Real Estate Investor',
-        bio: 'Ahmed is an ambitious investor looking to expand his property portfolio in the UAE. He wants a modern platform where he can quickly compare investment opportunities and calculate costs transparently.',
+        name: 'Omar Hassan',
+        age: 22,
+        occupation: 'Business Student',
+        bio: 'Omar spends most of his time writing emails to professors, preparing assignments, and attending group meetings. He wants AI tools that are fast, reliable, and easy to understand.',
         photo: theraPersonaImg,
         goals: [
-          'Easily compare property prices and locations',
-          'View all payment details upfront',
-          'Contact agents quickly'
+          'Write clear, professional emails quickly',
+          'Fix grammar mistakes without switching apps',
+          'Get accurate meeting notes — especially when the meeting is in another language'
         ],
         frustrations: [
-          'Hidden fees and unclear price breakdowns',
-          'Slow or confusing websites',
-          'Difficulty finding trustworthy listings'
+          'Switching between multiple different tools',
+          'Apps that feel complicated or cluttered',
+          'Unclear feature descriptions and hidden limitations'
         ]
       },
-      wireframes: [
-        {
-          description: 'Homepage wireframe showcasing the main hero section with search functionality and clean navigation.',
-          image: vernxWireframe1
-        },
-        {
-          description: 'Featured properties listing page displaying property cards with images, details, and pricing information.',
-          image: vernxWireframe2
-        },
-        {
-          description: 'Client reviews section featuring testimonials with ratings and customer feedback carousel.',
-          image: vernxWireframe3
-        },
-        {
-          description: 'Property detail page with image gallery, property specifications, and key features list.',
-          image: vernxWireframe4
-        },
-        {
-          description: 'Contact agent section with agent information and property cost breakdown including fees and monthly expenses.',
-          image: vernxWireframe5
-        },
-        {
-          description: 'Additional fees and FAQ section providing transparent cost information and common questions.',
-          image: vernxWireframe6
-        }
-      ],
       highFidelityUI: [
         {
-          description: 'High-fidelity homepage design featuring a dramatic hero section with "Find your dream place" search bar against a modern building background.',
-          image: vernxHighHome
-        },
-        {
-          description: 'Featured Properties section showcasing premium listings with property images, details, pricing, and view details buttons.',
-          image: vernxHighFeaturedProperties
-        },
-        {
-          description: 'Client Reviews section displaying testimonials from satisfied clients with 5-star ratings and their locations.',
-          image: vernxHighReviews
-        },
-        {
-          description: 'Property detail page showing a luxury villa with comprehensive image gallery, property specifications, and amenities list.',
-          image: vernxHighPropertyDetail
-        },
-        {
-          description: 'Contact and payment information section featuring agent details, additional fees breakdown, and monthly costs calculator.',
-          image: vernxHighContact
+          description: 'Homepage design featuring the main AI tool options.',
+          image: vernxCoverImg
         }
       ],
       usabilityTesting: {
-        description: 'I conducted a usability test with three participants who browsed, compared, and viewed detailed property pages.',
+        description: 'I conducted usability tests with three participants to evaluate the platform\'s ease of use and clarity.',
         findings: [
           {
             participant: 'Participant 1',
-            feedback: 'I love the dark theme — it feels premium. But I wish the property filter had more location options.'
+            feedback: 'The website is clean but I think the feature descriptions could be a bit shorter.'
           },
           {
             participant: 'Participant 2',
-            feedback: 'The cost breakdown helped a lot. Other websites usually hide those fees.'
+            feedback: 'I like the Meeting AI — the translation part is super useful.'
           },
           {
             participant: 'Participant 3',
-            feedback: 'The agent contact button should appear higher on the page — it\'s easy to miss.'
+            feedback: 'I didn\'t notice the Start button at first. It should be slightly more visible.'
           }
         ],
         improvements: [
           {
-            title: 'Enhanced Filters',
-            description: 'Added location, property type, and price range filters.'
+            title: 'Shorter Descriptions',
+            description: 'Shortened the feature descriptions to improve scannability.'
           },
           {
-            title: 'Visible Contact CTA',
-            description: 'Moved the agent button to appear above the property description.'
+            title: 'Enhanced Button Visibility',
+            description: 'Moved the "Start Now" button higher for better visibility.'
           },
           {
-            title: 'Cost Transparency',
-            description: 'Refined payment breakdown layout for better readability.'
+            title: 'Improved Spacing',
+            description: 'Enhanced spacing and hierarchy on the Meeting AI page.'
+          },
+          {
+            title: 'Better Differentiation',
+            description: 'Clarified the difference between Mail AI and Grammar AI through icons.'
           }
         ]
       },
       keyTakeaways: [
-        'A minimalist, premium design can enhance user trust and engagement.',
-        'Transparent pricing and easy agent contact are essential for conversion.',
-        'Small usability tweaks — such as repositioning buttons and filters — greatly improved task success rates.',
-        'Consistent design systems save time and ensure scalability for future pages.'
+        'Users prefer simple, clean layouts when dealing with productivity tools',
+        'Combining multiple AI tools into one flow reduces friction and improves efficiency',
+        'Small visual tweaks (button position, spacing, icons) greatly improve usability',
+        'Consistency across the design system helps users trust the platform'
       ]
     },
     'thera': {
@@ -613,7 +571,7 @@ const ProjectCaseStudy = () => {
   };
 
   const project = projects[projectId as keyof typeof projects];
-  const isDetailedCaseStudy = projectId === 'thera' || projectId === 'teachly' || projectId === 'book-heaven';
+  const isDetailedCaseStudy = projectId === 'thera' || projectId === 'teachly' || projectId === 'multipwr';
 
   if (!project) {
     return (
@@ -1173,7 +1131,7 @@ const ProjectCaseStudy = () => {
                   </div>
                 </section>
               </>
-            ) : (projectId === 'book-heaven' && 'informationArchitecture' in project ? (
+            ) : (projectId === 'multipwr' && 'informationArchitecture' in project ? (
               // VernX: Show three separate diagram sections without descriptions
               <>
                 {/* Information Architecture */}
@@ -1275,8 +1233,8 @@ const ProjectCaseStudy = () => {
               </>
             ) : null))}
 
-            {/* VernX Wireframes */}
-            {projectId === 'book-heaven' && (project as any).wireframes && (
+            {/* MultiPWR Wireframes - Not displayed */}
+            {projectId === 'multipwr' && (project as any).wireframes && (
               <section>
                 <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                   Wireframes
@@ -1303,14 +1261,14 @@ const ProjectCaseStudy = () => {
               </section>
             )}
 
-            {/* VernX High-Fidelity UI */}
-            {projectId === 'book-heaven' && (project as any).highFidelityUI && (
+            {/* MultiPWR High-Fidelity UI */}
+            {projectId === 'multipwr' && (project as any).highFidelityUI && (
               <section>
                 <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                   High-Fidelity UI Design
                 </h2>
                 <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium mb-8">
-                  The high-fidelity designs bring VernX to life with polished visuals, refined typography, and a cohesive color palette. These screens represent the final user interface, designed to convey luxury and professionalism while maintaining intuitive functionality.
+                  The high-fidelity designs showcase MultiPWR's clean and minimal interface, designed to help users access AI productivity tools without friction or complexity.
                 </p>
                 <div className="space-y-8">
                   {(project as any).highFidelityUI.map((screen: any, index: number) => (
@@ -1332,7 +1290,7 @@ const ProjectCaseStudy = () => {
             )}
 
             {/* Wireframes (Thera/Teachly only) */}
-            {'wireframes' in project && projectId !== 'book-heaven' && (
+            {'wireframes' in project && projectId !== 'multipwr' && (
             <section>
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 Wireframes
@@ -1357,7 +1315,7 @@ const ProjectCaseStudy = () => {
             )}
 
             {/* Final UI Design (Thera/Teachly only) */}
-            {'wireframes' in project && projectId !== 'book-heaven' && (project as any).wireframes?.high && (project as any).wireframes.high.length > 0 && (
+            {'wireframes' in project && projectId !== 'multipwr' && (project as any).wireframes?.high && (project as any).wireframes.high.length > 0 && (
               <section>
                 <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                   Final UI Design
