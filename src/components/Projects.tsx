@@ -17,9 +17,9 @@ const Projects = () => {
     image: theraImg,
     category: 'Healthcare'
   }, {
-    id: 'book-heaven',
-    title: 'VernX',
-    description: 'Luxury Real Estate Website',
+    id: 'multipwr',
+    title: 'MultiPWR',
+    description: 'AI-powered productivity platform combining email generation, grammar checking, and meeting notes',
     image: vernxCoverImg,
     category: 'UI/UX Design'
   }];
