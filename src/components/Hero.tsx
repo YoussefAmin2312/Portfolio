@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="max-w-4xl ml-8 text-left">
 
           {/* Subtitle */}
-          <p className="font-heading text-xl sm:text-2xl lg:text-4xl text-white/90 mb-6 fade-in-delay-2">I'm Youssef, A Computer Engineer, UI/UX Designer & Mobile App Developer</p>
+          <p className="font-heading text-xl sm:text-2xl lg:text-4xl text-white/90 mb-6 fade-in-delay-2">I'm Youssef, UI/UX Designer, Computer Engineer & Mobile App Developer</p>
 
           {/* Tagline */}
           <p className="text-lg sm:text-xl text-white/80 mb-12 max-w-2xl fade-in-delay-2">
