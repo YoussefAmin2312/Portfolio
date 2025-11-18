@@ -619,6 +619,7 @@ const ProjectCaseStudy = () => {
   // Render detailed UX Case Study for Thera, Teachly, and VernX
   if (isDetailedCaseStudy && ('persona' in project || 'personas' in project || 'researchMethodology' in project)) {
     const isTeachlyProject = projectId === 'teachly';
+    const isMultiPWRProject = projectId === 'multipwr';
     const headerImage = isTeachlyProject ? teachlyHeaderImg : project.image;
     
     return (
@@ -1381,6 +1382,27 @@ const ProjectCaseStudy = () => {
                     width="100%" 
                     height="1000" 
                     src="https://embed.figma.com/proto/7UPul8PJEAA3bzqQhhRcYE/Untitled?page-id=0%3A1&node-id=5-3&viewport=550%2C-195%2C0.13&scaling=scale-down&content-scaling=fixed&starting-point-node-id=5%3A3&show-proto-sidebar=1&embed-host=share" 
+                    allowFullScreen
+                  />
+                </div>
+              </section>
+            )}
+
+            {/* Interactive Prototype (MultiPWR only) */}
+            {isMultiPWRProject && (
+              <section id="prototype-section">
+                <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                  Interactive Prototype
+                </h2>
+                <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium mb-8">
+                  Explore the interactive Figma prototype to experience the complete user flow and interactions designed for MultiPWR.
+                </p>
+                <div className="rounded-lg overflow-hidden shadow-xl bg-background border border-border flex justify-center items-center py-8">
+                  <iframe 
+                    style={{ border: 'none' }} 
+                    width="100%" 
+                    height="1000" 
+                    src="https://embed.figma.com/proto/Lb8uckcmycyVpZp9uBMLkB/Untitled?page-id=0%3A1&node-id=69-283&viewport=472%2C226%2C0.12&scaling=scale-down&content-scaling=fixed&starting-point-node-id=69%3A283&embed-host=share" 
                     allowFullScreen
                   />
                 </div>
