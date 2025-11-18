@@ -50,6 +50,7 @@ import multipwrHighScreen2 from '@/assets/multipwr-high-screen-2.png';
 import multipwrHighScreen3 from '@/assets/multipwr-high-screen-3.png';
 import multipwrHighScreen4 from '@/assets/multipwr-high-screen-4.png';
 import multipwrHighScreen5 from '@/assets/multipwr-high-screen-5.png';
+import multipwrCoverImg from '@/assets/multipwr-cover.jpg';
 import teachlyWireframeLow1 from '@/assets/teachly-wireframe-low-1.png';
 import teachlyWireframeLow2 from '@/assets/teachly-wireframe-low-2.png';
 import teachlyWireframeLow3 from '@/assets/teachly-wireframe-low-3.png';
@@ -620,7 +621,7 @@ const ProjectCaseStudy = () => {
   if (isDetailedCaseStudy && ('persona' in project || 'personas' in project || 'researchMethodology' in project)) {
     const isTeachlyProject = projectId === 'teachly';
     const isMultiPWRProject = projectId === 'multipwr';
-    const headerImage = isTeachlyProject ? teachlyHeaderImg : project.image;
+    const headerImage = isTeachlyProject ? teachlyHeaderImg : isMultiPWRProject ? multipwrCoverImg : project.image;
     
     return (
       <div className="min-h-screen bg-background">
@@ -718,6 +719,31 @@ const ProjectCaseStudy = () => {
                 </Card>
               </div>
               {isTeachlyProject && (
+                <div className="flex justify-center mt-12">
+                  <Button 
+                    onClick={() => {
+                      const prototypeSection = document.getElementById('prototype-section');
+                      prototypeSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }}
+                    className="group bg-gradient-primary hover:opacity-90 text-white font-inter font-semibold text-lg px-10 py-7 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
+                  >
+                    <span className="flex items-center gap-3">
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Test Interactive Prototype
+                    </span>
+                  </Button>
+                </div>
+              )}
+              {isMultiPWRProject && (
                 <div className="flex justify-center mt-12">
                   <Button 
                     onClick={() => {
