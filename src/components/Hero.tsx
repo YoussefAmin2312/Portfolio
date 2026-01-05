@@ -173,7 +173,7 @@ const Hero = () => {
               className="flex lg:justify-start justify-center gap-4 pt-4 flex-wrap"
             >
               <a 
-                href="https://drive.google.com/uc?export=download&id=1XEllYypZs2UoznEDjtleIBsd16wAQl8Z" 
+                href="https://drive.google.com/uc?export=download&id=1gV9FUVQvnPFZvkt936ozHScUnjGxLyz8" 
                 download="Youssef_Yasser_Resume.pdf"
               >
                 <motion.button 
