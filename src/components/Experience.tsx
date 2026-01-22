@@ -4,8 +4,8 @@ const Experience = () => {
   const experiences = [
     {
       title: 'UI/UX Designer Intern',
-      company: 'Uneeq',
-      period: 'July 2025 – September 2025',
+      company: 'Elevvo Pathways',
+      period: 'September 2025 – October 2025',
       location: 'Remote',
     },
     {
