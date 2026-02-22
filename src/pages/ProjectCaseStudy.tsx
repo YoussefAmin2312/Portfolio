@@ -7,11 +7,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import ImageZoomDialog from '@/components/ImageZoomDialog';
 import Navigation from '@/components/Navigation';
 
-import vernxCoverImg from '@/assets/vernx-cover.jpg';
+import vernxCoverImg from '@/assets/vernx-cover.webp';
 import mendAiImg from '@/assets/mend-ai-project.jpg';
-import theraImg from '@/assets/thera-project.png';
+import theraImg from '@/assets/thera-project.webp';
 import theraDemoVideo from '@/assets/thera-demo-video.mp4';
-import teachlyImg from '@/assets/teachly-project.jpg';
+import teachlyImg from '@/assets/teachly-project.webp';
 import yogaSkincareImg from '@/assets/yoga-skincare-project.jpg';
 import cyberPhysicalImg from '@/assets/cyber-physical-project.jpg';
 import temperatureSensorImg from '@/assets/temperature-sensor-project.jpg';
@@ -30,9 +30,9 @@ import theraWireframeLow7 from '@/assets/thera-wireframe-low-7.png';
 import theraWireframeLow8 from '@/assets/thera-wireframe-low-8.png';
 import theraWireframeLow9 from '@/assets/thera-wireframe-low-9.png';
 import theraWireframeLow10 from '@/assets/thera-wireframe-low-10.png';
-import theraHighScreen1 from '@/assets/thera-high-screen-1.png';
-import theraHighScreen2 from '@/assets/thera-high-screen-2.png';
-import theraHighScreen3 from '@/assets/thera-high-screen-3.png';
+import theraHighScreen1 from '@/assets/thera-high-screen-1.webp';
+import theraHighScreen2 from '@/assets/thera-high-screen-2.webp';
+import theraHighScreen3 from '@/assets/thera-high-screen-3.webp';
 import theraHighScreen4 from '@/assets/thera-high-screen-4.png';
 import theraHighScreen5 from '@/assets/thera-high-screen-5.png';
 import theraHighScreen6 from '@/assets/thera-high-screen-6.png';
@@ -44,12 +44,12 @@ import theraInfoArchImg from '@/assets/thera-information-architecture-new.png';
 import multipwrInfoArchImg from '@/assets/multipwr-information-architecture.png';
 import multipwrUserFlowImg from '@/assets/multipwr-user-flow.png';
 import multipwrTaskFlowImg from '@/assets/multipwr-task-flow.png';
-import multipwrHighScreen1 from '@/assets/multipwr-high-screen-1.png';
-import multipwrHighScreen2 from '@/assets/multipwr-high-screen-2.png';
-import multipwrHighScreen3 from '@/assets/multipwr-high-screen-3.png';
+import multipwrHighScreen1 from '@/assets/multipwr-high-screen-1.webp';
+import multipwrHighScreen2 from '@/assets/multipwr-high-screen-2.webp';
+import multipwrHighScreen3 from '@/assets/multipwr-high-screen-3.webp';
 import multipwrHighScreen4 from '@/assets/multipwr-high-screen-4.png';
 import multipwrHighScreen5 from '@/assets/multipwr-high-screen-5.png';
-import multipwrCoverImg from '@/assets/multipwr-cover.jpg';
+import multipwrCoverImg from '@/assets/multipwr-cover.webp';
 import teachlyWireframeLow1 from '@/assets/teachly-wireframe-low-1.png';
 import teachlyWireframeLow2 from '@/assets/teachly-wireframe-low-2.png';
 import teachlyWireframeLow3 from '@/assets/teachly-wireframe-low-3.png';
@@ -78,7 +78,7 @@ import designThinkingImg from '@/assets/design-thinking-stages.png';
 import teachlyInfoArchImg from '@/assets/teachly-information-architecture.png';
 import teachlyUserFlowImg from '@/assets/teachly-user-flow.png';
 import teachlyTaskFlowImg from '@/assets/teachly-task-flow.png';
-import leanUxDiagramImg from '@/assets/lean-ux-diagram.png';
+import leanUxDiagramImg from '@/assets/lean-ux-diagram.webp';
 import vernxInfoArchImg from '@/assets/vernx-information-architecture.png';
 import vernxTaskFlowImg from '@/assets/vernx-task-flow.png';
 import vernxUserFlowImg from '@/assets/vernx-user-flow.png';
@@ -88,10 +88,10 @@ import vernxWireframe3 from '@/assets/vernx-wireframe-3.png';
 import vernxWireframe4 from '@/assets/vernx-wireframe-4.png';
 import vernxWireframe5 from '@/assets/vernx-wireframe-5.png';
 import vernxWireframe6 from '@/assets/vernx-wireframe-6.png';
-import vernxHighHome from '@/assets/vernx-high-home.png';
-import vernxHighFeaturedProperties from '@/assets/vernx-high-featured-properties.png';
+import vernxHighHome from '@/assets/vernx-high-home.webp';
+import vernxHighFeaturedProperties from '@/assets/vernx-high-featured-properties.webp';
 import vernxHighReviews from '@/assets/vernx-high-reviews.png';
-import vernxHighPropertyDetail from '@/assets/vernx-high-property-detail.png';
+import vernxHighPropertyDetail from '@/assets/vernx-high-property-detail.webp';
 import vernxHighContact from '@/assets/vernx-high-contact.png';
 
 const ProjectCaseStudy = () => {
@@ -621,11 +621,11 @@ const ProjectCaseStudy = () => {
     const isTeachlyProject = projectId === 'teachly';
     const isMultiPWRProject = projectId === 'multipwr';
     const headerImage = isMultiPWRProject ? multipwrCoverImg : project.image;
-    
+
     return (
       <div className="min-h-screen bg-background">
         <Navigation />
-        
+
         <ImageZoomDialog
           open={!!zoomImage}
           onOpenChange={(open) => !open && setZoomImage(null)}
@@ -641,24 +641,24 @@ const ProjectCaseStudy = () => {
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-background" />
-          
+
           <div className="absolute inset-0 flex flex-col justify-end">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 onClick={() => navigate('/')}
                 className="mb-6 text-white border-white/50 hover:bg-white hover:text-black backdrop-blur-sm bg-black/20"
               >
                 <ArrowLeft size={16} className="mr-2" />
                 Back to Portfolio
               </Button>
-              
+
               <div className="flex items-center gap-4 mb-4">
                 <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                   {project.category}
                 </Badge>
               </div>
-              
+
               <h1 className="font-heading font-bold text-4xl lg:text-6xl text-white mb-4">
                 {project.title}
               </h1>
@@ -701,7 +701,7 @@ const ProjectCaseStudy = () => {
               </div>
               {isTeachlyProject && (
                 <div className="flex justify-center mt-12">
-                  <Button 
+                  <Button
                     onClick={() => {
                       const prototypeSection = document.getElementById('prototype-section');
                       prototypeSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -709,11 +709,11 @@ const ProjectCaseStudy = () => {
                     className="group bg-gradient-primary hover:opacity-90 text-white font-inter font-semibold text-lg px-10 py-7 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
                   >
                     <span className="flex items-center gap-3">
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12" 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12"
+                        fill="none"
+                        viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
@@ -726,7 +726,7 @@ const ProjectCaseStudy = () => {
               )}
               {isMultiPWRProject && (
                 <div className="flex justify-center mt-12">
-                  <Button 
+                  <Button
                     onClick={() => {
                       const prototypeSection = document.getElementById('prototype-section');
                       prototypeSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -734,11 +734,11 @@ const ProjectCaseStudy = () => {
                     className="group bg-gradient-primary hover:opacity-90 text-white font-inter font-semibold text-lg px-10 py-7 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
                   >
                     <span className="flex items-center gap-3">
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12" 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12"
+                        fill="none"
+                        viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
@@ -753,14 +753,14 @@ const ProjectCaseStudy = () => {
 
             {/* The Challenge / Problem */}
             {'problem' in project && (
-            <section>
-              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
-                {isTeachlyProject ? 'The Challenge' : 'The Problem'}
-              </h2>
-              <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] whitespace-pre-line font-medium">
-                {(project as any).problem}
-              </p>
-            </section>
+              <section>
+                <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                  {isTeachlyProject ? 'The Challenge' : 'The Problem'}
+                </h2>
+                <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] whitespace-pre-line font-medium">
+                  {(project as any).problem}
+                </p>
+              </section>
             )}
 
             {/* Research */}
@@ -768,7 +768,7 @@ const ProjectCaseStudy = () => {
               <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
                 UX Research
               </h2>
-              
+
               <div className="space-y-8">
                 {'researchMethodology' in project && (project as any).researchMethodology === 'Lean UX' ? (
                   // Lean UX Framework for VernX
@@ -968,143 +968,143 @@ const ProjectCaseStudy = () => {
 
             {/* Persona */}
             {('persona' in project || 'personas' in project) && (
-            <section>
-              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
-                User Persona{(project as any).personas ? 's' : ''}
-              </h2>
-              
-              {(project as any).personas ? (
-                // Multiple personas (for Teachly)
-                <div className="space-y-6">
-                  {(project as any).personas.map((persona: any, index: number) => (
-                    <Card key={index}>
-                      <CardContent className="pt-6">
-                        <div className="flex flex-col md:flex-row gap-6">
-                          <div className="flex-shrink-0">
-                            <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center">
-                              <Users className="text-muted-foreground" size={48} />
+              <section>
+                <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                  User Persona{(project as any).personas ? 's' : ''}
+                </h2>
+
+                {(project as any).personas ? (
+                  // Multiple personas (for Teachly)
+                  <div className="space-y-6">
+                    {(project as any).personas.map((persona: any, index: number) => (
+                      <Card key={index}>
+                        <CardContent className="pt-6">
+                          <div className="flex flex-col md:flex-row gap-6">
+                            <div className="flex-shrink-0">
+                              <div className="w-32 h-32 rounded-full bg-muted flex items-center justify-center">
+                                <Users className="text-muted-foreground" size={48} />
+                              </div>
+                            </div>
+                            <div className="flex-1 space-y-4">
+                              <div>
+                                <h3 className="font-semibold text-xl text-foreground">
+                                  {persona.name}
+                                </h3>
+                                <p className="text-base text-foreground">
+                                  {persona.age} years old, {persona.occupation}
+                                </p>
+                                {persona.location && (
+                                  <p className="text-base text-foreground">
+                                    {persona.location}
+                                  </p>
+                                )}
+                              </div>
+                              <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
+                                {persona.bio}
+                              </p>
                             </div>
                           </div>
-                          <div className="flex-1 space-y-4">
+
+                          <div className="grid md:grid-cols-2 gap-6 mt-6 pt-6 border-t">
                             <div>
-                              <h3 className="font-semibold text-xl text-foreground">
-                                {persona.name}
-                              </h3>
-                              <p className="text-base text-foreground">
-                                {persona.age} years old, {persona.occupation}
-                              </p>
-                              {persona.location && (
-                                <p className="text-base text-foreground">
-                                  {persona.location}
-                                </p>
-                              )}
+                              <h4 className="font-semibold text-foreground mb-3">Goals</h4>
+                              <ul className="space-y-2">
+                                {persona.goals.map((goal: string, idx: number) => (
+                                  <li key={idx} className="flex items-start space-x-2">
+                                    <span className="text-primary mt-1">✓</span>
+                                    <span className="text-foreground text-base">{goal}</span>
+                                  </li>
+                                ))}
+                              </ul>
                             </div>
-                            <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
-                              {persona.bio}
+                            <div>
+                              <h4 className="font-semibold text-foreground mb-3">Frustrations</h4>
+                              <ul className="space-y-2">
+                                {persona.frustrations.map((frustration: string, idx: number) => (
+                                  <li key={idx} className="flex items-start space-x-2">
+                                    <AlertCircle className="text-destructive mt-0.5 flex-shrink-0" size={16} />
+                                    <span className="text-foreground text-base">{frustration}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                ) : 'persona' in project && (
+                  // Single persona (for Thera and other projects)
+                  <Card>
+                    <CardContent className="pt-6">
+                      <div className="flex flex-col md:flex-row gap-6">
+                        <div className="flex-shrink-0">
+                          <img
+                            src={(project as any).persona.photo}
+                            alt={(project as any).persona.name}
+                            className="w-32 h-32 rounded-full object-cover"
+                          />
+                        </div>
+                        <div className="flex-1 space-y-4">
+                          <div>
+                            <h3 className="font-semibold text-xl text-foreground">
+                              {(project as any).persona.name}
+                            </h3>
+                            <p className="text-base text-foreground">
+                              {(project as any).persona.age} years old, {(project as any).persona.occupation}
                             </p>
                           </div>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-6 mt-6 pt-6 border-t">
-                          <div>
-                            <h4 className="font-semibold text-foreground mb-3">Goals</h4>
-                            <ul className="space-y-2">
-                              {persona.goals.map((goal: string, idx: number) => (
-                                <li key={idx} className="flex items-start space-x-2">
-                                  <span className="text-primary mt-1">✓</span>
-                                  <span className="text-foreground text-base">{goal}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-foreground mb-3">Frustrations</h4>
-                            <ul className="space-y-2">
-                              {persona.frustrations.map((frustration: string, idx: number) => (
-                                <li key={idx} className="flex items-start space-x-2">
-                                  <AlertCircle className="text-destructive mt-0.5 flex-shrink-0" size={16} />
-                                  <span className="text-foreground text-base">{frustration}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              ) : 'persona' in project && (
-                // Single persona (for Thera and other projects)
-                <Card>
-                  <CardContent className="pt-6">
-                    <div className="flex flex-col md:flex-row gap-6">
-                      <div className="flex-shrink-0">
-                        <img
-                          src={(project as any).persona.photo}
-                          alt={(project as any).persona.name}
-                          className="w-32 h-32 rounded-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1 space-y-4">
-                        <div>
-                          <h3 className="font-semibold text-xl text-foreground">
-                            {(project as any).persona.name}
-                          </h3>
-                          <p className="text-base text-foreground">
-                            {(project as any).persona.age} years old, {(project as any).persona.occupation}
+                          <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
+                            {(project as any).persona.bio}
                           </p>
                         </div>
-                        <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">
-                          {(project as any).persona.bio}
-                        </p>
                       </div>
-                    </div>
 
-                    <div className="grid md:grid-cols-2 gap-6 mt-6 pt-6 border-t">
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-3">Goals</h4>
-                        <ul className="space-y-2">
-                          {(project as any).persona.goals.map((goal: string, index: number) => (
-                            <li key={index} className="flex items-start space-x-2">
-                              <span className="text-primary mt-1">✓</span>
-                              <span className="text-foreground text-base">{goal}</span>
-                            </li>
-                          ))}
-                        </ul>
+                      <div className="grid md:grid-cols-2 gap-6 mt-6 pt-6 border-t">
+                        <div>
+                          <h4 className="font-semibold text-foreground mb-3">Goals</h4>
+                          <ul className="space-y-2">
+                            {(project as any).persona.goals.map((goal: string, index: number) => (
+                              <li key={index} className="flex items-start space-x-2">
+                                <span className="text-primary mt-1">✓</span>
+                                <span className="text-foreground text-base">{goal}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-foreground mb-3">Frustrations</h4>
+                          <ul className="space-y-2">
+                            {(project as any).persona.frustrations.map((frustration: string, index: number) => (
+                              <li key={index} className="flex items-start space-x-2">
+                                <AlertCircle className="text-destructive mt-0.5 flex-shrink-0" size={16} />
+                                <span className="text-foreground text-base">{frustration}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-3">Frustrations</h4>
-                        <ul className="space-y-2">
-                          {(project as any).persona.frustrations.map((frustration: string, index: number) => (
-                            <li key={index} className="flex items-start space-x-2">
-                              <AlertCircle className="text-destructive mt-0.5 flex-shrink-0" size={16} />
-                              <span className="text-foreground text-base">{frustration}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
-            </section>
+                    </CardContent>
+                  </Card>
+                )}
+              </section>
             )}
 
             {/* Project Goals */}
             {'projectGoals' in project && (
-            <section>
-              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
-                Project Goals
-              </h2>
-              <ul className="space-y-3">
-                {(project as any).projectGoals.map((goal: string, index: number) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <Target className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">{goal}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
+              <section>
+                <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                  Project Goals
+                </h2>
+                <ul className="space-y-3">
+                  {(project as any).projectGoals.map((goal: string, index: number) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <Target className="text-primary mt-1 flex-shrink-0" size={18} />
+                      <span className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">{goal}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
             )}
 
             {/* Information Architecture & Diagrams */}
@@ -1190,40 +1190,40 @@ const ProjectCaseStudy = () => {
 
                 {/* Task Flow */}
                 {'taskFlow' in project && (
-                <section>
-                  <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
-                    Task Flow
-                  </h2>
-                  <p className="text-foreground text-base mb-6">
-                    The task flow outlines the step-by-step process users follow to complete key actions on VernX, from browsing properties to scheduling viewings or making inquiries.
-                  </p>
-                  <div className="rounded-lg overflow-hidden shadow-md bg-background p-4 cursor-pointer hover:shadow-xl transition-shadow" onClick={() => handleImageClick((project as any).taskFlow, 'Task Flow diagram')}>
-                    <img
-                      src={(project as any).taskFlow}
-                      alt="Task Flow diagram"
-                      className="w-full"
-                    />
-                  </div>
-                </section>
+                  <section>
+                    <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                      Task Flow
+                    </h2>
+                    <p className="text-foreground text-base mb-6">
+                      The task flow outlines the step-by-step process users follow to complete key actions on VernX, from browsing properties to scheduling viewings or making inquiries.
+                    </p>
+                    <div className="rounded-lg overflow-hidden shadow-md bg-background p-4 cursor-pointer hover:shadow-xl transition-shadow" onClick={() => handleImageClick((project as any).taskFlow, 'Task Flow diagram')}>
+                      <img
+                        src={(project as any).taskFlow}
+                        alt="Task Flow diagram"
+                        className="w-full"
+                      />
+                    </div>
+                  </section>
                 )}
 
                 {/* User Flow */}
                 {'userFlow' in project && (
-                <section>
-                  <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
-                    User Flow
-                  </h2>
-                  <p className="text-foreground text-base mb-6">
-                    This flow maps the user's journey through VernX, highlighting decision points and interactions as they search, filter, and engage with property listings.
-                  </p>
-                  <div className="rounded-lg overflow-hidden shadow-md bg-background p-4 cursor-pointer hover:shadow-xl transition-shadow" onClick={() => handleImageClick((project as any).userFlow.image, 'User Flow diagram')}>
-                    <img
-                      src={(project as any).userFlow.image}
-                      alt="User Flow diagram"
-                      className="w-full"
-                    />
-                  </div>
-                </section>
+                  <section>
+                    <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                      User Flow
+                    </h2>
+                    <p className="text-foreground text-base mb-6">
+                      This flow maps the user's journey through VernX, highlighting decision points and interactions as they search, filter, and engage with property listings.
+                    </p>
+                    <div className="rounded-lg overflow-hidden shadow-md bg-background p-4 cursor-pointer hover:shadow-xl transition-shadow" onClick={() => handleImageClick((project as any).userFlow.image, 'User Flow diagram')}>
+                      <img
+                        src={(project as any).userFlow.image}
+                        alt="User Flow diagram"
+                        className="w-full"
+                      />
+                    </div>
+                  </section>
                 )}
               </>
             ) : ('userFlow' in project ? (
@@ -1328,27 +1328,27 @@ const ProjectCaseStudy = () => {
 
             {/* Wireframes (Thera/Teachly only) */}
             {'wireframes' in project && projectId !== 'multipwr' && (
-            <section>
-              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
-                Wireframes
-              </h2>
-              <div className="space-y-8">
-                <div>
-                  <h3 className="font-semibold text-xl text-foreground mb-4">Low Fidelity</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {(project as any).wireframes.low.map((wireframe: string, index: number) => (
-                      <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer" onClick={() => handleImageClick(wireframe, `Low fidelity wireframe ${index + 1}`)}>
-                        <img
-                          src={wireframe}
-                          alt={`Low fidelity wireframe ${index + 1}`}
-                          className="w-full h-auto"
-                        />
-                      </div>
-                    ))}
+              <section>
+                <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                  Wireframes
+                </h2>
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="font-semibold text-xl text-foreground mb-4">Low Fidelity</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                      {(project as any).wireframes.low.map((wireframe: string, index: number) => (
+                        <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer" onClick={() => handleImageClick(wireframe, `Low fidelity wireframe ${index + 1}`)}>
+                          <img
+                            src={wireframe}
+                            alt={`Low fidelity wireframe ${index + 1}`}
+                            className="w-full h-auto"
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
             )}
 
             {/* Final UI Design (Thera/Teachly only) */}
@@ -1384,11 +1384,11 @@ const ProjectCaseStudy = () => {
                   Explore the interactive Figma prototype to experience the complete user flow and interactions designed for Teachly.
                 </p>
                 <div className="rounded-lg overflow-hidden shadow-xl bg-background border border-border flex justify-center items-center py-8">
-                  <iframe 
-                    style={{ border: 'none' }} 
-                    width="100%" 
-                    height="1000" 
-                    src="https://embed.figma.com/proto/7UPul8PJEAA3bzqQhhRcYE/Untitled?page-id=0%3A1&node-id=5-3&viewport=550%2C-195%2C0.13&scaling=scale-down&content-scaling=fixed&starting-point-node-id=5%3A3&show-proto-sidebar=1&embed-host=share" 
+                  <iframe
+                    style={{ border: 'none' }}
+                    width="100%"
+                    height="1000"
+                    src="https://embed.figma.com/proto/7UPul8PJEAA3bzqQhhRcYE/Untitled?page-id=0%3A1&node-id=5-3&viewport=550%2C-195%2C0.13&scaling=scale-down&content-scaling=fixed&starting-point-node-id=5%3A3&show-proto-sidebar=1&embed-host=share"
                     allowFullScreen
                   />
                 </div>
@@ -1405,11 +1405,11 @@ const ProjectCaseStudy = () => {
                   Explore the interactive Figma prototype to experience the complete user flow and interactions designed for MultiPWR.
                 </p>
                 <div className="rounded-lg overflow-hidden shadow-xl bg-background border border-border flex justify-center items-center py-8">
-                  <iframe 
-                    style={{ border: 'none' }} 
-                    width="100%" 
-                    height="1000" 
-                    src="https://embed.figma.com/proto/Lb8uckcmycyVpZp9uBMLkB/Untitled?page-id=0%3A1&node-id=69-283&viewport=472%2C226%2C0.12&scaling=scale-down&content-scaling=fixed&starting-point-node-id=69%3A283&embed-host=share" 
+                  <iframe
+                    style={{ border: 'none' }}
+                    width="100%"
+                    height="1000"
+                    src="https://embed.figma.com/proto/Lb8uckcmycyVpZp9uBMLkB/Untitled?page-id=0%3A1&node-id=69-283&viewport=472%2C226%2C0.12&scaling=scale-down&content-scaling=fixed&starting-point-node-id=69%3A283&embed-host=share"
                     allowFullScreen
                   />
                 </div>
@@ -1418,77 +1418,77 @@ const ProjectCaseStudy = () => {
 
             {/* Usability Testing */}
             {'usabilityTesting' in project && (
-            <section>
-              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
-                Usability Testing & Iterations
-              </h2>
-              <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium mb-8">
-                {(project as any).usabilityTesting.description}
-              </p>
-              
-              {/* Participant Findings */}
-              <div className="mb-10">
-                <h3 className="font-semibold text-2xl text-foreground mb-6 flex items-center gap-2">
-                  <AlertCircle className="text-primary" size={24} />
-                  Key Findings
-                </h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {(project as any).usabilityTesting.findings.map((finding: any, index: number) => (
-                    <Card key={index} className="border-l-4 border-l-primary/60 bg-card/50">
-                      <CardContent className="p-6">
-                        <div className="flex items-start gap-3">
-                          <div className="bg-primary/10 p-3 rounded-full">
-                            <Users className="text-primary" size={20} />
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-foreground mb-2">{finding.participant}</h4>
-                            <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">"{finding.feedback}"</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
+              <section>
+                <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                  Usability Testing & Iterations
+                </h2>
+                <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium mb-8">
+                  {(project as any).usabilityTesting.description}
+                </p>
 
-              {/* Improvements Made */}
-              <div>
-                <h3 className="font-semibold text-2xl text-foreground mb-6 flex items-center gap-2">
-                  <Lightbulb className="text-primary" size={24} />
-                  Improvements Made
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {(project as any).usabilityTesting.improvements.map((improvement: any, index: number) => (
-                    <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                      <CardContent className="p-6">
-                        <div className="mb-4 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                          <Target className="text-primary" size={24} />
-                        </div>
-                        <h4 className="font-semibold text-foreground text-lg mb-2">{improvement.title}</h4>
-                        <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">{improvement.description}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
+                {/* Participant Findings */}
+                <div className="mb-10">
+                  <h3 className="font-semibold text-2xl text-foreground mb-6 flex items-center gap-2">
+                    <AlertCircle className="text-primary" size={24} />
+                    Key Findings
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {(project as any).usabilityTesting.findings.map((finding: any, index: number) => (
+                      <Card key={index} className="border-l-4 border-l-primary/60 bg-card/50">
+                        <CardContent className="p-6">
+                          <div className="flex items-start gap-3">
+                            <div className="bg-primary/10 p-3 rounded-full">
+                              <Users className="text-primary" size={20} />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-foreground mb-2">{finding.participant}</h4>
+                              <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">"{finding.feedback}"</p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </section>
+
+                {/* Improvements Made */}
+                <div>
+                  <h3 className="font-semibold text-2xl text-foreground mb-6 flex items-center gap-2">
+                    <Lightbulb className="text-primary" size={24} />
+                    Improvements Made
+                  </h3>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    {(project as any).usabilityTesting.improvements.map((improvement: any, index: number) => (
+                      <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <CardContent className="p-6">
+                          <div className="mb-4 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                            <Target className="text-primary" size={24} />
+                          </div>
+                          <h4 className="font-semibold text-foreground text-lg mb-2">{improvement.title}</h4>
+                          <p className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">{improvement.description}</p>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+              </section>
             )}
 
             {/* Key Takeaways */}
             {'keyTakeaways' in project && (
-            <section className="pb-12">
-              <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
-                Key Takeaways
-              </h2>
-              <ul className="space-y-3">
-                {(project as any).keyTakeaways.map((takeaway: string, index: number) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <Lightbulb className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">{takeaway}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
+              <section className="pb-12">
+                <h2 className="font-heading font-bold text-3xl text-foreground mb-6">
+                  Key Takeaways
+                </h2>
+                <ul className="space-y-3">
+                  {(project as any).keyTakeaways.map((takeaway: string, index: number) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <Lightbulb className="text-primary mt-1 flex-shrink-0" size={18} />
+                      <span className="text-foreground text-[19.5px] leading-[1.9] tracking-[0.25px] font-medium">{takeaway}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
             )}
           </div>
         </div>
@@ -1500,15 +1500,15 @@ const ProjectCaseStudy = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Header */}
       <div className="bg-muted/30 py-8 mt-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="flex items-center gap-4 mb-4">
             <Badge variant="secondary">{project.category}</Badge>
           </div>
-          
+
           <h1 className="font-heading font-bold text-4xl lg:text-5xl text-foreground mb-4">
             {project.title}
           </h1>

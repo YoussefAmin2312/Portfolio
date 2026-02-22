@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import introImg from '@/assets/about-intro.jpg';
-import skill1Img from '@/assets/about-skill-1.jpg';
-import skill2Img from '@/assets/about-skill-2.jpg';
-import philosophyImg from '@/assets/about-philosophy.jpg';
+import introImg from '@/assets/about-intro.webp';
+import skill1Img from '@/assets/about-skill-1.webp';
+import skill2Img from '@/assets/about-skill-2.webp';
+import philosophyImg from '@/assets/about-philosophy.webp';
 
 const About = () => {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
           {/* Left Tall Rectangle - Intro */}
           <div className="lg:col-span-4 h-[600px] group relative overflow-hidden">
-            <div 
+            <div
               className="absolute inset-0 bg-cover bg-center transition-all duration-500 grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100"
               style={{ backgroundImage: `url(${introImg})` }}
             />
@@ -38,7 +38,7 @@ const About = () => {
           <div className="lg:col-span-4 flex flex-col gap-8">
             {/* Top Rectangle - Design Focus */}
             <div className="h-[288px] group relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 bg-cover bg-center transition-all duration-500 grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100"
                 style={{ backgroundImage: `url(${skill1Img})` }}
               />
@@ -52,7 +52,7 @@ const About = () => {
 
             {/* Bottom Rectangle - Development Skills */}
             <div className="h-[288px] group relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 bg-cover bg-center transition-all duration-500 grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100"
                 style={{ backgroundImage: `url(${skill2Img})` }}
               />
@@ -64,7 +64,7 @@ const About = () => {
 
           {/* Right Tall Rectangle - Philosophy/Photo */}
           <div className="lg:col-span-4 h-[600px] group relative overflow-hidden">
-            <div 
+            <div
               className="absolute inset-0 bg-cover bg-center transition-all duration-500 grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100"
               style={{ backgroundImage: `url(${philosophyImg})` }}
             />
@@ -79,7 +79,7 @@ const About = () => {
 
         {/* See About Me Button */}
         <div className="flex justify-center">
-          <Button 
+          <Button
             onClick={() => navigate('/about')}
             size="lg"
             className="bg-gradient-primary hover:opacity-90 text-white font-semibold px-8 py-6 text-lg transition-opacity duration-300"

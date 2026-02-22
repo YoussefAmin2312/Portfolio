@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import multipwrCoverImg from '@/assets/multipwr-cover.jpg';
-import theraImg from '@/assets/thera-project.png';
-import teachlyImg from '@/assets/teachly-project.jpg';
+import multipwrCoverImg from '@/assets/multipwr-cover.webp';
+import theraImg from '@/assets/thera-project.webp';
+import teachlyImg from '@/assets/teachly-project.webp';
 import sineaImg from '../../assets/SINEAthumb.jpg';
 import archImg from '../../assets/archthumb.png';
 
