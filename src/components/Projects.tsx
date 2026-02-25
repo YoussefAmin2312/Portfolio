@@ -5,8 +5,9 @@ import { ExternalLink } from 'lucide-react';
 import multipwrCoverImg from '@/assets/multipwr-cover.webp';
 import theraImg from '@/assets/thera-project.webp';
 import teachlyImg from '@/assets/teachly-project.webp';
-import sineaImg from '../../assets/SINEAthumb.jpg';
-import archImg from '../../assets/archthumb.png';
+import sineaImg from '../../assets/sinea-project.jpg';
+import archImg from '../../assets/arch-project.jpg';
+import rayaImg from '../../assets/raya-agency-project.png';
 
 type Page = 'websites' | 'case-studies';
 
@@ -21,11 +22,19 @@ const websiteProjects = [
   },
   {
     id: 'arch',
-    title: 'ArchVision Studio',
+    title: 'Minimal Architecture',
     description: 'Architecture & interior design company website with modern aesthetics',
     image: archImg,
     category: 'Architecture',
     link: 'https://youssefamin2312.github.io/ARCH/',
+  },
+  {
+    id: 'raya',
+    title: 'Raya Agency',
+    description: 'Full-service photographic agency representing world-class photographers across fashion, editorial, and commercial disciplines',
+    image: rayaImg,
+    category: 'Photography',
+    link: 'https://youssefamin2312.github.io/Photo/',
   },
 ];
 

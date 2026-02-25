@@ -8,7 +8,6 @@ const Footer = () => {
     { label: 'About', href: '#about' },
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
-    { label: 'Experience', href: '#experience' },
   ];
 
   const socialLinks = [
@@ -39,7 +38,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-heading font-bold text-2xl">Youssef Yasser</h3>
             <p className="text-background/80 leading-relaxed">
-              Computer Engineer, UI/UX Designer, and Mobile App Developer passionate about 
+              Computer Engineer, UI/UX Designer, and Mobile App Developer passionate about
               creating meaningful digital experiences.
             </p>
             <div className="flex space-x-4">
@@ -81,7 +80,7 @@ const Footer = () => {
               <p className="text-background/80">
                 <span className="font-medium">Email:</span>
                 <br />
-                <a 
+                <a
                   href="mailto:youssef.yasser.1408@gmail.com"
                   className="hover:text-background transition-colors"
                 >
