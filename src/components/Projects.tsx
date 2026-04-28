@@ -8,10 +8,19 @@ import teachlyImg from '@/assets/teachly-project.webp';
 import sineaImg from '../../assets/sinea-project.jpg';
 import archImg from '../../assets/arch-project.jpg';
 import rayaImg from '../../assets/raya-agency-project.png';
+import saudiseerahImg from '@/assets/saudiseerah-project.png';
 
 type Page = 'websites' | 'case-studies';
 
 const websiteProjects = [
+  {
+    id: 'saudiseerah',
+    title: 'SaudiSeerah',
+    description: 'The best Arabic resume website in the Middle East — AI-powered resumes tailored for the Saudi job market',
+    image: saudiseerahImg,
+    category: 'SaaS Platform',
+    link: 'https://saudiseerah.com',
+  },
   {
     id: 'sinea',
     title: 'Sinea',
@@ -149,6 +158,7 @@ const Projects = () => {
                         src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        style={project.id === 'saudiseerah' ? { objectPosition: 'top' } : undefined}
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                         <h3 className="font-heading font-bold text-3xl text-white mb-1">{project.title}</h3>

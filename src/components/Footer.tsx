@@ -1,4 +1,4 @@
-import { Heart, Linkedin, Mail } from 'lucide-react';
+import { Heart, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,11 +11,6 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    {
-      icon: <Linkedin size={20} />,
-      href: 'https://www.linkedin.com/in/amin-yyoussef/',
-      label: 'LinkedIn',
-    },
     {
       icon: <Mail size={20} />,
       href: 'https://mail.google.com/mail/?view=cm&fs=1&to=youssef.yasser.1408@gmail.com',

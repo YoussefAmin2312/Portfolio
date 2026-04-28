@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, MapPin, Phone, Send, Github, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -65,12 +65,6 @@ const Contact = () => {
       name: 'GitHub',
       href: 'https://github.com',
       color: 'hover:text-primary',
-    },
-    {
-      icon: <Linkedin size={24} />,
-      name: 'LinkedIn',
-      href: 'https://linkedin.com',
-      color: 'hover:text-secondary',
     },
   ];
 
